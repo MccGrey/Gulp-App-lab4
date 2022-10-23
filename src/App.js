@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar from "./components/navbar/Navbar";
 import AlcoholicDrinks from "./pages/AlcoholicDrinks";
 import NonAlcoholicDrinks from "./pages/NonAlcoholicDrinks";
 import Home from "./pages/Home";
