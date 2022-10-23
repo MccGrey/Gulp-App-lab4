@@ -3,16 +3,18 @@ import "./navbar.css";
 
 export default function Navbar() {
   return (
-    <nav className="nav">
-      <Link to="/" className="logo">
-        LOGO
-      </Link>
-      <ul>
-        <CustomLink to="/">Home</CustomLink>
-        <CustomLink to="/alcoholicDrinks">Alcoholic Drinks</CustomLink>
-        <CustomLink to="/nonAlcoholicDrinks">Non-Alcoholic Drinks</CustomLink>
-      </ul>
-    </nav>
+    <div className="nav-container">
+      <nav className="container nav">
+        <Link to="/" className="logo">
+          LOGO
+        </Link>
+        <ul>
+          <CustomLink to="/">Home</CustomLink>
+          <CustomLink to="/alcoholicDrinks">Alcoholic Drinks</CustomLink>
+          <CustomLink to="/nonAlcoholicDrinks">Non-Alcoholic Drinks</CustomLink>
+        </ul>
+      </nav>
+    </div>
   );
 }
 
