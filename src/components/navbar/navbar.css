@@ -1,0 +1,11 @@
+.nav {
+  background-color: rgb(116, 54, 54);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav a {
+  color: inherit;
+}
