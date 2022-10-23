@@ -16,6 +16,9 @@
   height: 4rem;
 }
 
+.nav img {
+  height: 50px;
+}
 .nav ul {
   display: flex;
   gap: 1.5rem;

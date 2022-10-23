@@ -5,6 +5,7 @@ import { FaUserAlt } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
+import LOGO from "../../assets/logodark.png";
 
 export default function Navbar() {
   const navRef = useRef();
@@ -17,7 +18,7 @@ export default function Navbar() {
     <div className="nav-container">
       <nav className="container nav">
         <Link to="/" className="logo">
-          LOGO
+          <img src={LOGO} alt="logo" />
         </Link>
 
         <ul ref={navRef}>
