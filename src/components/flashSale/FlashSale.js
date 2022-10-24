@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import IMG1 from "../../assets/BAILEYS IRISH CREAM DELIGHT 75CL.png";
 import IMG2 from "../../assets/B & G CUVEE SPECIALE RED (FRANCE).png";
 import IMG3 from "../../assets/Bombay Sapphire 75cl (x12).png";
@@ -72,6 +72,13 @@ const data = [
   },
 ];
 const FlashSale = () => {
+  const [cart, setCart] = useState([]);
+
+  const handleClick = (id, image, title, oldPrice, newPrice) => {
+    setCart([...cart, id, image, title, oldPrice, newPrice]);
+    console.log(cart);
+  };
+
   return (
     <section className="container flash-sale-section">
       <div className="  flash-sale">
@@ -84,7 +91,12 @@ const FlashSale = () => {
           return (
             <article key={id} className="item-details">
               <div className="item-image">
-                <img src={image} alt={title} />
+                <img
+                  src={image}
+                  alt={title}
+                  data={data}
+                  handleClick={handleClick}
+                />
               </div>
 
               <h3>{title}</h3>
@@ -93,7 +105,14 @@ const FlashSale = () => {
                 <h4>{newPrice}</h4>
               </div>
               <div className="item-cta">
-                <button className="add-cart">Add to cart</button>
+                <button
+                  className="add-cart"
+                  onClick={() =>
+                    handleClick(id, image, title, oldPrice, newPrice)
+                  }
+                >
+                  Add to cart
+                </button>
                 <button className="buy-now">buy Now</button>
               </div>
             </article>

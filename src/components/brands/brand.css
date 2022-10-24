@@ -1,0 +1,6 @@
+.brand-container {
+  width: 100%;
+  background: var(--accent-color);
+  height: 50%;
+  margin-top: 3rem;
+}

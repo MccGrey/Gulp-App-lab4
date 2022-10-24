@@ -32,8 +32,13 @@ export default function Navbar() {
         </ul>
 
         <div className="nav-icons">
-          <FaUserAlt />
-          <FaShoppingCart />
+          <span className="profile">
+            <FaUserAlt />
+          </span>
+          <span className="shopping-cart">
+            <FaShoppingCart />
+            <span className="cart-number">1</span>
+          </span>
         </div>
 
         <button className="nav-btn open-nav" onClick={showNavbar}>
