@@ -6,9 +6,9 @@ const Search = () => {
   return (
     <div className="search-container">
       <select>
+        <option value="grape">All Categories</option>
         <option value="grape">Graope fruit</option>
-        <option value="grape">Graope fruit</option>
-        <option selected value="grape">
+        <option select="true" value="grape">
           Graope fruit
         </option>
         <option value="grape">Graope fruit</option>
