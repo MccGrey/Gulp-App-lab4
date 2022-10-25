@@ -1,5 +1,6 @@
 .testimonials {
   margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .testimonial-heading {
@@ -20,6 +21,7 @@
 .testimonials-container {
   width: 50%;
   margin: auto;
+  margin-top: 3rem;
 }
 
 .testimonial-card > img {
@@ -34,8 +36,10 @@
 .testimonial-card {
   background: linear-gradient(to top, var(--primary-color), var(--white-color));
   text-align: center;
+  border-radius: 15px;
   padding: 2rem;
   user-select: none;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
 }
 
 .testimonial-card .icon-quote {
@@ -79,5 +83,14 @@
 @media screen and (max-width: 600px) {
   .testimonials-container {
     width: var(--container-width-sm);
+  }
+  .testimonial-heading > h3 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .testimonial-heading .bar {
+    width: 55%;
+    margin-left: 5rem;
   }
 }
