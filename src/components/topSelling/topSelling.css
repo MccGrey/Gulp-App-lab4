@@ -92,6 +92,9 @@
 }
 
 @media screen and (max-width: 600px) {
+  .container {
+    width: 92%;
+  }
   .top-selling-cards {
     grid-template-columns: 1fr 1fr;
     gap: 1.2rem;
@@ -107,7 +110,7 @@
   }
 
   .heading .bar {
-    margin-left: 11rem;
+    margin-left: 8.5rem;
     margin-top: 0.6rem;
   }
 }

@@ -41,7 +41,7 @@ const TopCategory = () => {
     },
   ];
   return (
-    <section className="top-category">
+    <section className="container top-category">
       <div className="top-category-heading">
         <h3>Explore Popular Categories</h3>
         <div className="bar"></div>

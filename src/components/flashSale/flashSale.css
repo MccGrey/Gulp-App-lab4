@@ -116,6 +116,12 @@ h3 {
     grid-template-columns: 1fr 1fr;
     gap: 1.2rem;
   }
+
+  .item-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -159,5 +165,16 @@ h3 {
 
   .item-prices span {
     display: none;
+  }
+
+  .item-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .item-image img {
+    width: 109px;
+    height: 100px;
   }
 }

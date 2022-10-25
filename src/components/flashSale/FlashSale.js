@@ -66,7 +66,7 @@ const data = [
   {
     id: 8,
     image: IMG8,
-    title: "NESTLE PURE LIFE REGULAR WATER 600ML",
+    title: "NESTLE PURE LIFE REGULAR WATER",
     oldPrice: "N80000",
     newPrice: "N50000",
   },
