@@ -2,6 +2,7 @@ import React from "react";
 import Brand from "../components/brands/Brand";
 import FlashSale from "../components/flashSale/FlashSale";
 import Search from "../components/searchbar/Search";
+import TopCategory from "../components/topCategories/TopCategory";
 import TopSelling from "../components/topSelling/TopSelling";
 
 const Home = () => {
@@ -11,6 +12,7 @@ const Home = () => {
       <FlashSale />
       <Brand />
       <TopSelling />
+      <TopCategory />
     </div>
   );
 };

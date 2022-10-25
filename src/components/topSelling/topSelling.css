@@ -16,6 +16,7 @@
 
 .heading .bar {
   width: 8rem;
+  color: var(--primary-color);
 }
 
 .top-selling-details {
