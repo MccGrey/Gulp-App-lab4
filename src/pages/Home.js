@@ -6,11 +6,13 @@ import Testimonials from "../components/testimonials/Testimonials";
 import TopCategory from "../components/topCategories/TopCategory";
 import TopSelling from "../components/topSelling/TopSelling";
 import Footer from "../components/footer/Footer";
+import SectionHero from "../components/section-hero/SectionHero";
 
 const Home = () => {
   return (
     <div>
       <Search />
+      <SectionHero />
       <FlashSale />
       <Brand />
       <TopSelling />

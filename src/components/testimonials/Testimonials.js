@@ -17,21 +17,18 @@ import { Pagination } from "swiper";
 const Testimonials = () => {
   const data = [
     {
-      id: 1,
       avatr: TEST3,
       pname: "Angela Koya",
       review: "Gulp always leaves me in awe with their swift delivery service",
     },
 
     {
-      id: 2,
       avatr: TEST1,
       pname: "Remy Johnny",
       review: "I love that I can get varieties of drink everytime",
     },
 
     {
-      id: 1,
       avatr: TEST2,
       pname: "Sandra Kent",
       review: "I cant count how many of my friends I showed this site to.",
@@ -45,12 +42,10 @@ const Testimonials = () => {
       </div>
       <Swiper
         className="testimonials-container"
-        pagination={{
-          type: "progressbar",
-        }}
+        pagination={true}
+        modules={[Pagination]}
         slidesPerView={1}
         spaceBetween={40}
-        modules={[Pagination]}
       >
         {data.map(({ avatr, pname, review }, index) => {
           return (
