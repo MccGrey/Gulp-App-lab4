@@ -9,9 +9,14 @@
   color: var(--black-color);
   font-family: "oswald", sans-serif;
   font-weight: 400;
-  border-bottom: 3px solid var(--black-color);
+
   font-size: 34px;
   padding-top: 3rem;
+}
+
+.bar {
+  width: 11.5rem;
+  border: 2px solid;
 }
 
 .brand {
@@ -24,4 +29,23 @@
 .brand > img {
   height: 40px;
   margin-bottom: 6rem;
+}
+
+.brand .redbull {
+  height: 25px;
+}
+
+@media screen and (max-width: 600px) {
+  .brand {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .brand-container > h3 {
+    text-align: center;
+    font-size: 30px;
+  }
+  .bar {
+    margin-left: 9.5rem;
+  }
 }

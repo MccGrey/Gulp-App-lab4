@@ -21,15 +21,16 @@ import BRAND18 from "../../assets/Hennessy-Logo 2.png";
 
 const Brand = () => {
   return (
-    <section className=" brand-container">
+    <section className="container brand-container">
       <h3>Brands we sell</h3>
+      <div className="bar"></div>
       <div className="brand">
         <img src={BRAND1} alt="GLENFIDDICH"></img>
         <img src={BRAND2} alt="cococola"></img>
         <img src={BRAND3} alt="Guiness"></img>
         <img src={BRAND4} alt="GLENFIDDICH"></img>
         <img src={BRAND5} alt="GLENFIDDICH"></img>
-        <img src={BRAND6} alt="GLENFIDDICH"></img>
+        <img src={BRAND6} alt="GLENFIDDICH" className="redbull"></img>
         <img src={BRAND7} alt="GLENFIDDICH"></img>
         <img src={BRAND8} alt="GLENFIDDICH"></img>
         <img src={BRAND9} alt="GLENFIDDICH"></img>
