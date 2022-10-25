@@ -76,3 +76,37 @@
   background: var(--white-color);
   color: var(--primary-color);
 }
+
+@media screen and (max-width: 1024px) {
+  .top-selling-cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+
+  .top-selling-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .top-selling-cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+
+  .top-selling-details {
+    padding: 0;
+  }
+  .heading > h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .heading .bar {
+    margin-left: 11rem;
+    margin-top: 0.6rem;
+  }
+}
