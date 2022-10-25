@@ -1,6 +1,7 @@
 .testimonials {
   margin-top: 3rem;
   margin-bottom: 3rem;
+  background: var(--accent-color);
 }
 
 .testimonial-heading {
@@ -40,6 +41,7 @@
   padding: 2rem;
   user-select: none;
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+  margin-bottom: 6rem;
 }
 
 .testimonial-card .icon-quote {

@@ -5,6 +5,7 @@ import Search from "../components/searchbar/Search";
 import Testimonials from "../components/testimonials/Testimonials";
 import TopCategory from "../components/topCategories/TopCategory";
 import TopSelling from "../components/topSelling/TopSelling";
+import Footer from "../components/footer/Footer";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <TopSelling />
       <TopCategory />
       <Testimonials />
+      <Footer />
     </div>
   );
 };
