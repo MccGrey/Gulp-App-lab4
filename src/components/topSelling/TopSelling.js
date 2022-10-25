@@ -17,21 +17,21 @@ const TopSelling = () => {
     {
       id: 2,
       image: TOP2,
-      title: "HENNESSY VSOP 75CL",
+      title: "MALTA GUINESS 330ML",
       price: "N50000",
     },
 
     {
       id: 3,
       image: TOP3,
-      title: "HENNESSY VSOP 75CL",
+      title: "DOMAINE PRE CLOS D’ANJOU ROSE (FRANCE)",
       price: "N50000",
     },
 
     {
       id: 4,
       image: TOP4,
-      title: "HENNESSY VSOP 75CL",
+      title: "COCA COLA 50cl (PET)x12",
       price: "N50000",
     },
   ];

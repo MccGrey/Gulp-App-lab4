@@ -1,0 +1,78 @@
+.top-selling {
+  margin-top: 3rem;
+}
+
+.top-selling-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.heading > h3 {
+  font-family: "oswald", sans-serif;
+  font-size: 34px;
+  color: var(--primary-color);
+}
+
+.heading .bar {
+  width: 8rem;
+}
+
+.top-selling-details {
+  padding: 1.3rem;
+  background: white;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.3);
+  transition: all 400ms ease-in-out;
+}
+
+.top-selling-details:hover {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+.top-selling-image > img {
+  width: 209px;
+  height: 200px;
+}
+
+.top-selling-details > h3 {
+  font-size: 1rem;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "oswald", sans-serif;
+  color: var(--black-color);
+}
+
+.top-selling-prices {
+  display: flex;
+  font-family: "oswald", sans-serif;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 25px;
+  color: var(--primary-color);
+}
+
+.top-selling-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.top-selling-cta .add-cart {
+  padding: 4px 75px;
+  border-radius: 4px;
+  border: 1px solid var(--primary-color);
+  background: var(--primary-color);
+  color: var(--white-color);
+  font-family: "oswald", sans-serif;
+  font-size: 14px;
+  transition: all 400ms ease-in-out;
+}
+
+.top-selling-cta .add-cart:hover {
+  background: var(--white-color);
+  color: var(--primary-color);
+}
