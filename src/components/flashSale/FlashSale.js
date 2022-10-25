@@ -20,7 +20,7 @@ const data = [
   {
     id: 2,
     image: IMG2,
-    title: "B & G CUVEE SPECIALE RED (FRANCE)",
+    title: "B & G CUVEE SPECIALE RED",
     oldPrice: "N80000",
     newPrice: "N50000",
   },
@@ -50,7 +50,7 @@ const data = [
   {
     id: 6,
     image: IMG6,
-    title: "REDBULL COFFE CANNED DRINK 250ML",
+    title: "REDBULL COFFE CANNED DRINK",
     oldPrice: "N80000",
     newPrice: "N50000",
   },
@@ -81,11 +81,12 @@ const FlashSale = () => {
 
   return (
     <section className="container flash-sale-section">
-      <div className="  flash-sale">
-        <h2>Flash Sale</h2>
-        <h3>12hrs:20mins:24secs</h3>
+      <div className="flash-timer">
+        <div className="  flash-sale">
+          <h2>Flash Sale</h2>
+          <h3>12hrs:20mins:24secs</h3>
+        </div>
       </div>
-
       <div className="flash-sale-cards">
         {data.map(({ id, image, title, oldPrice, newPrice }) => {
           return (
