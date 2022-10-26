@@ -1,7 +1,5 @@
 import React from "react";
 import "./button.css";
-import Footer from "../../components/footer/Footer";
-import Alcohol from "../acohols/Alcohol";
 
 const Button = () => {
   return (
@@ -16,8 +14,6 @@ const Button = () => {
         <button>Rose wine</button>
       </div>
       <div className="horizontal"></div>
-      <Alcohol />
-      <Footer />
     </section>
   );
 };
