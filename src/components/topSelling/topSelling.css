@@ -113,4 +113,14 @@
     margin-left: 8.5rem;
     margin-top: 0.6rem;
   }
+
+  .top-selling-image > img {
+    width: 109px;
+    height: 100px;
+  }
+
+  .top-selling-cta .add-cart {
+    font-size: 0.8rem;
+    padding: 8px 45px;
+  }
 }

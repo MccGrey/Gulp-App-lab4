@@ -1,0 +1,54 @@
+.gin,
+.whiskey,
+.red-wine,
+.rose {
+  background: var(--accent-color);
+  padding: 20px;
+}
+
+.gin .heading > h3,
+.cream .heading > h3,
+.whiskey .heading > h3,
+.cognac .heading > h3,
+.white-wine .heading > h3,
+.rose .heading > h3 {
+  color: var(--black-color);
+}
+.gin-cards,
+.cream-cards,
+.whiskey-cards,
+.cognac-cards,
+.red-wine-cards,
+.white-wine-cards,
+.rose-cards {
+  margin-bottom: 4rem;
+}
+
+.cream,
+.cognac,
+.white-wine {
+  padding: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .button-clicks {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .button-clicks > button {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--container-width-sm);
+    margin: auto;
+  }
+
+  .button-clicks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

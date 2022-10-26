@@ -24,7 +24,7 @@ const TopSelling = () => {
     {
       id: 3,
       image: TOP3,
-      title: "DOMAINE PRE CLOS D’ANJOU ROSE (FRANCE)",
+      title: "DOMAINE PRE CLOS ROSE (FRANCE)",
       price: "N50000",
     },
 
