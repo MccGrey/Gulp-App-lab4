@@ -213,7 +213,7 @@ const Alcohol = () => {
   return (
     <div className="alcohol-container-main">
       <Button />
-      <section className="top-selling gin">
+      <section className="top-selling gin" id="gin">
         <div className="heading">
           <h3>GIN</h3>
         </div>
@@ -239,7 +239,7 @@ const Alcohol = () => {
         </div>
       </section>
 
-      <section className="top-selling cream">
+      <section className="top-selling cream" id="cream">
         <div className="heading">
           <h3>Cream</h3>
         </div>
@@ -265,7 +265,7 @@ const Alcohol = () => {
         </div>
       </section>
 
-      <section className="top-selling whiskey">
+      <section className="top-selling whiskey" id="whiskey">
         <div className="heading">
           <h3>Whiskey</h3>
         </div>
@@ -291,7 +291,7 @@ const Alcohol = () => {
         </div>
       </section>
 
-      <section className="top-selling cognac container">
+      <section className="top-selling cognac container" id="cognac">
         <div className="heading">
           <h3>Cognac</h3>
         </div>
@@ -317,7 +317,7 @@ const Alcohol = () => {
         </div>
       </section>
 
-      <section className="top-selling red-wine">
+      <section className="top-selling red-wine" id="red-wine">
         <div className="heading">
           <h3>Red Wine</h3>
         </div>
@@ -343,7 +343,7 @@ const Alcohol = () => {
         </div>
       </section>
 
-      <section className="top-selling white-wine">
+      <section className="top-selling white-wine" id="white-wine">
         <div className="heading">
           <h3>White Wine</h3>
         </div>
@@ -369,7 +369,7 @@ const Alcohol = () => {
         </div>
       </section>
 
-      <section className="top-selling rose">
+      <section className="top-selling rose" id="rose">
         <div className="heading">
           <h3>Rose</h3>
         </div>

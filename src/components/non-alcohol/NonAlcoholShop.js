@@ -23,6 +23,7 @@ import NONALCWINE1 from "../../assets/EVA SPARKLING RED GRAPE DRINK 750ML.png";
 import NONALCWINE2 from "../../assets/EVA SPARKLING RED GRAPE DRINK 750ML.png";
 import NONALCWINE3 from "../../assets/EVA SPARKLING RED GRAPE DRINK 750ML.png";
 import NONALCWINE4 from "../../assets/EVA SPARKLING RED GRAPE DRINK 750ML.png";
+import "./nonAlcoholShop.css";
 
 const NonAlcoholShop = () => {
   const data = [
@@ -208,8 +209,8 @@ const NonAlcoholShop = () => {
   ];
 
   return (
-    <>
-      <section className="top-selling gin">
+    <div className="main">
+      <section className="top-selling gin" id="juice">
         <div className="heading">
           <h3>JUICE</h3>
         </div>
@@ -235,7 +236,7 @@ const NonAlcoholShop = () => {
         </div>
       </section>
 
-      <section className="top-selling cream">
+      <section className="top-selling cream" id="soft-drinks">
         <div className="heading">
           <h3>SOFT DRINKS</h3>
         </div>
@@ -261,7 +262,7 @@ const NonAlcoholShop = () => {
         </div>
       </section>
 
-      <section className="top-selling whiskey">
+      <section className="top-selling whiskey" id="water">
         <div className="heading">
           <h3>WATER</h3>
         </div>
@@ -287,7 +288,7 @@ const NonAlcoholShop = () => {
         </div>
       </section>
 
-      <section className="top-selling cognac container">
+      <section className="top-selling cognac container" id="energy">
         <div className="heading">
           <h3>ENERGY</h3>
         </div>
@@ -313,7 +314,7 @@ const NonAlcoholShop = () => {
         </div>
       </section>
 
-      <section className="top-selling red-wine">
+      <section className="top-selling red-wine" id="malt">
         <div className="heading">
           <h3>MALT</h3>
         </div>
@@ -339,7 +340,7 @@ const NonAlcoholShop = () => {
         </div>
       </section>
 
-      <section className="top-selling white-wine">
+      <section className="top-selling white-wine" id="iced-tea">
         <div className="heading">
           <h3>ICED TEA</h3>
         </div>
@@ -365,7 +366,7 @@ const NonAlcoholShop = () => {
         </div>
       </section>
 
-      <section className="top-selling rose">
+      <section className="top-selling rose" id="non-alc-wine">
         <div className="heading">
           <h3>NON ALCOHOLIC WINE</h3>
         </div>
@@ -390,7 +391,7 @@ const NonAlcoholShop = () => {
           })}
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

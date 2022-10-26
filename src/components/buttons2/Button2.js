@@ -6,13 +6,28 @@ const Button2 = () => {
     <>
       <section className="alcoholic-section">
         <div className="button-clicks">
-          <button>Juice</button>
-          <button>Soft Drinks</button>
-          <button>Water</button>
-          <button>Energy</button>
-          <button>Malt</button>
-          <button>Iced Tea</button>
-          <button>Non Alc Wine</button>
+          <a href="#juice">
+            <button>Juice</button>
+          </a>{" "}
+          <a href="#soft-drinks">
+            <button>Soft Drinks</button>
+          </a>
+          <a href="#water">
+            <button>Water</button>
+          </a>
+          <a href="#energy">
+            <button>Energy</button>
+          </a>
+          <a href="#malt">
+            {" "}
+            <button>Malt</button>
+          </a>
+          <a href="#iced-tea">
+            <button>Iced Tea</button>
+          </a>
+          <a href="#non-alc-wine">
+            <button>Non Alc Wine </button>
+          </a>
         </div>
         <div className="horizontal"></div>
       </section>

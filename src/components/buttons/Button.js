@@ -5,13 +5,33 @@ const Button = () => {
   return (
     <section className="alcoholic-section">
       <div className="button-clicks">
-        <button>Gin</button>
-        <button>Cream</button>
-        <button>Whiskey</button>
-        <button>Cognac</button>
-        <button>Red wine</button>
-        <button>White wine</button>
-        <button>Rose wine</button>
+        <a href="#gin">
+          <button>Gin</button>
+        </a>
+
+        <a href="#cream">
+          <button>Cream </button>
+        </a>
+
+        <a href="#whiskey">
+          <button>Whiskey </button>
+        </a>
+
+        <a href="#cognac">
+          <button>Cognac </button>
+        </a>
+
+        <a href="#red-wine">
+          <button>Red Wine</button>
+        </a>
+
+        <a href="#white-wine">
+          <button>White Wine</button>
+        </a>
+
+        <a href="#rose">
+          <button>Rose</button>
+        </a>
       </div>
       <div className="horizontal"></div>
     </section>
