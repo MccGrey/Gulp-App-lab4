@@ -1,4 +1,5 @@
 import React from "react";
+import "./buttons2.css";
 
 const Button2 = () => {
   return (

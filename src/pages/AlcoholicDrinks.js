@@ -1,13 +1,11 @@
 import React from "react";
-import Button from "../components/buttons/Button";
-import Alcohol from "../components/acohols/Alcohol";
+import Legality from "../components/legality/Legality";
 import Footer from "../components/footer/Footer";
 
 const AlcoholicDrinks = () => {
   return (
     <div>
-      <Button />
-      <Alcohol />
+      <Legality />
       <Footer />
     </div>
   );

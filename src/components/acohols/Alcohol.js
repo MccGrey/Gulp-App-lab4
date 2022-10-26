@@ -24,6 +24,8 @@ import ROSE1 from "../../assets/DOMAINE PRE CLOS D’ANJOU ROSE (FRANCE).png";
 import ROSE2 from "../../assets/DOMAINE PRE CLOS D’ANJOU ROSE (FRANCE).png";
 import ROSE3 from "../../assets/DOMAINE PRE CLOS D’ANJOU ROSE (FRANCE).png";
 import ROSE4 from "../../assets/DOMAINE PRE CLOS D’ANJOU ROSE (FRANCE).png";
+import Button from "../../components/buttons/Button";
+import Footer from "../footer/Footer";
 
 const Alcohol = () => {
   const data = [
@@ -209,7 +211,8 @@ const Alcohol = () => {
   ];
 
   return (
-    <>
+    <div className="alcohol-container-main">
+      <Button />
       <section className="top-selling gin">
         <div className="heading">
           <h3>GIN</h3>
@@ -391,7 +394,8 @@ const Alcohol = () => {
           })}
         </div>
       </section>
-    </>
+      <Footer />
+    </div>
   );
 };
 

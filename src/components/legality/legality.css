@@ -1,0 +1,75 @@
+.legality-section {
+  width: 100%;
+  margin: auto;
+  padding-top: 10rem;
+}
+
+.legality-container {
+  text-align: center;
+}
+
+.legality-container > h3 {
+  margin-bottom: 4rem;
+  font-family: "oswald", sans-serif;
+  font-weight: 400;
+  color: var(--primary-color);
+}
+
+.legality-container > h4 {
+  margin-bottom: 4rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-family: "oswald", sans-serif;
+  color: var(--primary-color);
+}
+
+.legality-btn {
+  margin: auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5rem;
+}
+
+.btn-yes {
+  padding: 5px 25px;
+  color: var(--white-color);
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  font-family: "oswald", sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-yes:hover {
+  background: var(--white-color);
+  color: var(--primary-color);
+}
+
+.btn-no {
+  padding: 5px 25px;
+  color: var(--primary-color);
+  background: var(--white-color);
+  border: 1px solid var(--primary-color);
+  font-family: "oswald", sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-no:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+
+@media screen and (max-width: 600px) {
+  .legality-btn {
+    display: inline-block;
+  }
+
+  .btn-yes {
+    margin-bottom: 3rem;
+    padding: 5px 20px;
+  }
+}

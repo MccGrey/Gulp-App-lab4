@@ -32,3 +32,26 @@
   border-radius: 10%;
   margin-top: 2rem;
 }
+
+@media screen and (max-width: 1024px) {
+  .button-clicks {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .button-clicks > button {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--container-width-sm);
+    margin: auto;
+  }
+
+  .button-clicks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
