@@ -1,5 +1,6 @@
 import React from "react";
 import "./sectionHero.css";
+import { Link } from "react-router-dom";
 import HERO1 from "../../assets/cognac 1.png";
 import HERO2 from "../../assets/gin 1.png";
 import HERO3 from "../../assets/iced tea 1.png";
@@ -59,7 +60,9 @@ const SectionHero = () => {
             We are your go to source for all the drinks you need, at all times.
             Delivered almost immediately at your doorstep
           </p>
-          <button className="shop-now">Shop Now</button>
+          <Link to="/shop">
+            <button className="shop-now"> Shop Now</button>
+          </Link>{" "}
         </div>
 
         <Swiper
