@@ -63,11 +63,11 @@
 .cart-number {
   padding: 0 3px;
   color: var(--white-color);
-  font-weight: bold;
+  font-weight: lighter;
   position: relative;
   background: var(--error-color);
   border-radius: 5px;
-  top: -15px;
+  top: -10px;
 }
 @media screen and (max-width: 1024px) {
   .container {
