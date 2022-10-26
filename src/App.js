@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import { Route, Routes } from "react-router-dom";
 import Shop from "../src/components/shopNow/Shop";
 import Alcohol from "./components/acohols/Alcohol";
+import Product from "./components/product-details/Product";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/alcoholicDrinks" element={<AlcoholicDrinks />} />
           <Route path="/nonAlcoholicDrinks" element={<NonAlcoholicDrinks />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/product" element={<Product />} />
         </Routes>
       </div>
     </>

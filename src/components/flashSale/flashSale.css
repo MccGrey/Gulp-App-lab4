@@ -95,6 +95,14 @@ h3 {
   font-size: 14px;
 }
 
+.item-cta .buy-now-link > button {
+  padding: 4px 18px;
+  border-radius: 4px;
+  border: 1px solid;
+  font-family: "oswald", sans-serif;
+  font-size: 14px;
+}
+
 .item-cta .add-cart {
   background: var(--primary-color);
   color: var(--white-color);
@@ -151,10 +159,11 @@ h3 {
     display: none;
   }
 
-  .item-cta .buy-now {
+  .item-cta .buy-now-link > button {
     background: var(--primary-color);
     color: var(--white-color);
     margin: auto;
+    margin-left: 0.5rem;
     padding: 8px 55px;
   }
 

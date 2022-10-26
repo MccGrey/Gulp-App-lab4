@@ -8,6 +8,7 @@ import IMG6 from "../../assets/REDBULL COFFE CANNED DRINK 250ML.png";
 import IMG7 from "../../assets/LIPTON ICE TEA LEMON 450ML.png";
 import IMG8 from "../../assets/NESTLE PURE LIFE REGULAR WATER 600ML.png";
 import "./flashSale.css";
+import { Link } from "react-router-dom";
 
 const data = [
   {
@@ -114,7 +115,10 @@ const FlashSale = () => {
                 >
                   Add to cart
                 </button>
-                <button className="buy-now">buy Now</button>
+
+                <Link to="/product" className="buy-now-link">
+                  <button className="buy-now">buy Now</button>
+                </Link>
               </div>
             </article>
           );
