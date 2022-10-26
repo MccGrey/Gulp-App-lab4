@@ -1,4 +1,3 @@
-
 import React from "react";
 import Navbar from "./components/navbar/Navbar";
 import AlcoholicDrinks from "./pages/AlcoholicDrinks";
@@ -26,6 +25,5 @@ const App = () => {
     </>
   );
 };
-
 
 export default App;

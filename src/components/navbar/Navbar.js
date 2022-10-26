@@ -36,12 +36,10 @@ export default function Navbar() {
             <FaUserAlt />
           </span>
 
-          <Link to="/cart" className="shopping-cart">
-            <span>
-              <FaShoppingCart />
-              <span className="cart-number">1</span>
-            </span>
-          </Link>
+          <span>
+            <FaShoppingCart />
+            <span className="cart-number">1</span>
+          </span>
         </div>
 
         <button className="nav-btn open-nav" onClick={showNavbar}>
