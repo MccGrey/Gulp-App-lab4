@@ -10,6 +10,7 @@ import Product from "./components/product-details/Product";
 import Login from "./components/login/Login";
 import Cart from "./components/cart/Cart";
 import Signup from "./components/signup/Signup";
+import Checkout from "./components/checkout/Chekout";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </div>
     </>
