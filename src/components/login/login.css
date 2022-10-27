@@ -1,0 +1,97 @@
+.login-container {
+  width: 100%;
+  margin: auto;
+}
+
+.login {
+  text-align: center;
+  padding: 10%;
+}
+
+.login > h3 {
+  font-family: "oswald", sans-serif;
+  font-size: 44px;
+  color: var(--primary-color);
+  margin-bottom: 4rem;
+}
+
+.login > h4 {
+  font-family: "oswald", sans-serif;
+  font-size: 31px;
+  font-weight: 400;
+  padding: 2px 50px;
+  background: var(--grey-color);
+  color: var(--black-color);
+  margin-bottom: 4rem;
+}
+
+.login h4 > a {
+  color: var(--black-color);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.login h4 > a:hover {
+  color: var(--primary-color);
+}
+
+form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+label {
+  text-align: start;
+  margin: 8px 0;
+  font-family: "mulish", sans-serif;
+  font-size: 15px;
+}
+form > input {
+  padding: 8px;
+  margin-bottom: 35px;
+  border-radius: 4px;
+  border: 1px solid var(--grey-color);
+}
+
+.password {
+  margin-bottom: 7rem;
+}
+form > button {
+  width: 40%;
+  padding: 7px 0;
+  margin: auto;
+  background: var(--primary-color);
+  color: var(--white-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+form > button:hover {
+  background: var(--white-color);
+  color: var(--primary-color);
+}
+
+@media screen and (max-width: 1024px) {
+  .login > h4 {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .login-container {
+    padding-top: 6rem;
+  }
+
+  .login > h4 {
+    font-size: 1rem;
+    padding: 6px 0;
+  }
+
+  form {
+    width: 100%;
+  }
+}
