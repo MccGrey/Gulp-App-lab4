@@ -1,0 +1,65 @@
+.signup {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+}
+
+.signup label,
+.signup input {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  font-family: "mulish", sans-serif;
+  font-size: 15px;
+}
+
+.signup input {
+  padding: 8px 200px 8px 8px;
+  margin-bottom: 35px;
+  border-radius: 4px;
+  border: 1px solid var(--grey-color);
+}
+
+.user-select {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-button {
+  width: 15%;
+  padding: 7px 0;
+  font-family: "oswald", sans-serif;
+  margin: auto;
+  background: var(--primary-color);
+  color: var(--white-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.signup-button:hover {
+  background: var(--white-color);
+  color: var(--primary-color);
+}
+
+@media screen and (max-width: 1024px) {
+  .signup input {
+    padding: 8px 80px 8px 8px;
+  }
+
+  .user-select {
+    margin-bottom: 4rem;
+  }
+
+  .signup-button {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .signup {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}

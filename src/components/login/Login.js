@@ -4,12 +4,12 @@ import "./login.css";
 
 const Login = () => {
   return (
-    <div>
+    <>
       <section className="login-container">
         <div className="login">
           <h3>Sign-In</h3>
           <h4>
-            Do you have an account? <a href="/">click here</a> to sign up{" "}
+            Do you have an account? <a href="/signup">click here</a> to sign up{" "}
           </h4>
           <form>
             <label>E-mail</label>
@@ -21,12 +21,14 @@ const Login = () => {
               className="password"
             />
 
-            <button>Sign In</button>
+            <button onClick={console.log("you have logged in successfully")}>
+              Sign In
+            </button>
           </form>
         </div>
       </section>
       <Footer />
-    </div>
+    </>
   );
 };
 
