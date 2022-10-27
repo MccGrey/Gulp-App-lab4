@@ -7,6 +7,8 @@ import { Route, Routes } from "react-router-dom";
 import Shop from "../src/components/shopNow/Shop";
 import Alcohol from "./components/acohols/Alcohol";
 import Product from "./components/product-details/Product";
+import Login from "./components/login/Login";
+import Cart from "./components/cart/Cart";
 
 const App = () => {
   return (
@@ -20,6 +22,8 @@ const App = () => {
           <Route path="/nonAlcoholicDrinks" element={<NonAlcoholicDrinks />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/product" element={<Product />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </div>
     </>
