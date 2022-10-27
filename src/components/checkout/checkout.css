@@ -1,0 +1,7 @@
+.navigator > .cart-header {
+  border-bottom: none;
+}
+
+.navigator > .checkout-header {
+  border-bottom: 4px solid var(--primary-color);
+}

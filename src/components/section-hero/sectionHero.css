@@ -1,0 +1,101 @@
+.hero-section {
+  width: 100%;
+}
+
+.hero-container {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+  margin: auto;
+  margin: 1rem 0;
+}
+
+.hero-desc {
+  color: var(--primary-color);
+  font-family: "oswald", sans-serif;
+  margin-top: 4rem;
+}
+
+.hero-desc > h3 {
+  font-size: 44px;
+  color: var(--black-color);
+}
+
+.hero-desc > p {
+  color: var(--black-color);
+  width: 80%;
+  margin-top: 1.5rem;
+}
+
+.hero-desc .shop-now {
+  padding: 4px 65px;
+  border-radius: 4px;
+  border: 1px solid var(--primary-color);
+  background: var(--primary-color);
+  color: var(--white-color);
+  font-family: "oswald", sans-serif;
+  font-size: 14px;
+  transition: var(--transition);
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+.hero-desc .shop-now:hover {
+  color: var(--primary-color);
+  background: var(--white-color);
+}
+
+.hero-image > img {
+  height: 300px;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.hero-swiper {
+  width: 100%;
+  margin: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero-desc > h3 {
+    font-size: 33px;
+    color: var(--black-color);
+  }
+
+  .hero-desc > p {
+    color: var(--black-color);
+    width: 80%;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    margin-top: -2rem;
+  }
+
+  .hero-desc > h3 {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 400;
+  }
+
+  .hero-desc > p {
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-desc .shop-now {
+    margin-left: 5rem;
+  }
+}

@@ -1,0 +1,25 @@
+.shop {
+  background: var(--accent-color);
+  padding: 15px;
+}
+
+.alcoholic {
+  background: transparent;
+}
+
+.non-alcoholic {
+  background: var(--accent-color);
+  padding: 15px;
+}
+
+.non-alcoholic-cards {
+  margin-bottom: 175px;
+}
+
+.alcoholic-cards {
+  margin-bottom: 8rem;
+}
+
+.shop-cards {
+  margin-bottom: 8rem;
+}
