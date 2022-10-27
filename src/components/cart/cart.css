@@ -1,0 +1,31 @@
+.cart-section {
+  width: 100%;
+  margin: auto;
+}
+
+.cart-container {
+  padding: 9% 0%;
+}
+
+.cart-bar {
+  border: 2px solid var(--primary-color);
+  width: 100%;
+}
+
+.navigator {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navigator > h3 {
+  font-family: "oswald", sans-serif;
+  font-size: 44px;
+  color: var(--primary-color);
+  padding: 15px 262px;
+  border-bottom: 4px solid var(--primary-color);
+}
+
+.navigator > .checkout-head {
+  border-bottom: none;
+}
