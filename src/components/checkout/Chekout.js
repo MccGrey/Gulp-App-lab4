@@ -10,7 +10,7 @@ const Chekout = () => {
           <div className="cart-bar"></div>
           <div className="navigator">
             <h3 className="cart-head cart-header">Cart</h3>
-            <h3 className="checkout-head checkout-header">Checkout</h3>
+            <h3 className="checkout-head checkout-heading">Checkout</h3>
           </div>
         </div>
         <Footer />

@@ -6,11 +6,11 @@ import Home from "./pages/Home";
 import { Route, Routes } from "react-router-dom";
 import Shop from "../src/components/shopNow/Shop";
 import Alcohol from "./components/acohols/Alcohol";
-import Product from "./components/product-details/Product";
 import Login from "./components/login/Login";
 import Cart from "./components/cart/Cart";
 import Signup from "./components/signup/Signup";
 import Checkout from "./components/checkout/Chekout";
+import Details from "./components/details/Details";
 
 const App = () => {
   return (
@@ -23,7 +23,7 @@ const App = () => {
           <Route path="/alcoholicDrinks" element={<AlcoholicDrinks />} />
           <Route path="/nonAlcoholicDrinks" element={<NonAlcoholicDrinks />} />
           <Route path="/shop" element={<Shop />} />
-          <Route path="/product" element={<Product />} />
+          <Route path="/product" element={<Details />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/cart" element={<Cart />} />
