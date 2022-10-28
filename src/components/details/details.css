@@ -1,0 +1,158 @@
+.detail-line {
+  margin-bottom: 3rem;
+}
+
+.detail-main-conatiner .main-heading {
+  font-size: 31px;
+  color: var(--primary-color);
+  text-align: center;
+  font-weight: 400;
+  font-family: "oswald", sans-serif;
+  margin-bottom: 3rem;
+}
+
+.details-heading h3 {
+  font-size: 21px;
+  font-family: "oswald", sans-serif;
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+.details-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 3rem;
+}
+
+.details-heading,
+.details-content {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+}
+
+.detail-img {
+  padding: 0;
+  background: white;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.3);
+  transition: all 400ms ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-img:hover {
+  box-shadow: none;
+}
+
+.detail-img img {
+  height: 200px;
+}
+
+.detail-item-quantity {
+  display: flex;
+  align-items: flex-start;
+  width: 100px;
+  max-width: 100%;
+  justify-content: center;
+  gap: 4px;
+}
+
+.detail-package {
+  display: flex;
+  align-items: flex-start;
+  width: 100px;
+  max-width: 100%;
+  justify-content: center;
+  gap: 8px;
+}
+
+.detail-package small {
+  font-family: "oswald", sans-serif;
+  border: none;
+  background: var(--accent-color);
+  padding: 0.4rem 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.detail-package h3 {
+  font-size: 18px;
+  font-family: "oswald", sans-serif;
+  padding: 0.1rem 0.3rem;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.detail-item-quantity {
+  display: flex;
+  align-items: flex-start;
+  width: 100px;
+  max-width: 100%;
+  justify-content: center;
+  gap: 4px;
+}
+
+.detail-item-quantity button {
+  border: none;
+  background: var(--accent-color);
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  color: var(--primary-color);
+  font-family: "oswald", sans-serif;
+  font-size: 11px;
+}
+
+.detail-item-quantity .count {
+  padding: 0.2rem 0.8rem;
+  border: 1px solid var(--primary-color);
+  font-family: "oswald", sans-serif;
+  font-size: 13px;
+  color: var(--primary-color);
+}
+
+.detail-main-main .deatil-amount {
+  font-family: "oswald", sans-serif;
+  color: var(--black-color);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.details-content {
+  margin-bottom: 4rem;
+}
+
+.detailed-description h4 {
+  font-family: "oswald", sans-serif;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.detailed-description p {
+  width: 70%;
+  font-family: "mulish", sans-serif;
+  font-size: smaller;
+}
+
+.details-container {
+  margin-bottom: 4rem;
+}
+
+.detail-main-conatiner .detail-addtocart {
+  margin-left: 40%;
+  padding: 6px 38px;
+  font-family: "oswald", sans-serif;
+  font-size: 15px;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  background: var(--primary-color);
+  color: var(--white-color);
+  transition: var(--transition);
+  width: 200px;
+}
+
+.detail-main-conatiner .detail-addtocart:hover {
+  background: var(--white-color);
+  color: var(--primary-color);
+}
