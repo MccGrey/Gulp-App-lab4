@@ -17,6 +17,7 @@ const data = [
     title: "BAILEY IRISH CREAM DELIGHT 75cl",
     oldPrice: "N80000",
     newPrice: "N50000",
+    detail: "/product",
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ const data = [
     title: "B & G CUVEE SPECIALE RED",
     oldPrice: "N80000",
     newPrice: "N50000",
+    detail: "/product2",
   },
   {
     id: 3,
@@ -31,6 +33,7 @@ const data = [
     title: "Bombay Sapphire 75cl (x12)",
     oldPrice: "N80000",
     newPrice: "N50000",
+    detail: "/product3",
   },
   {
     id: 4,
@@ -38,6 +41,7 @@ const data = [
     title: "CAMUS VSOP 70CL",
     oldPrice: "N80000",
     newPrice: "N50000",
+    detail: "/product4",
   },
 
   {
@@ -46,6 +50,7 @@ const data = [
     title: "CHIVITA APPLLE JUICE 100CL",
     oldPrice: "N80000",
     newPrice: "N50000",
+    detail: "/product5",
   },
 
   {
@@ -54,6 +59,7 @@ const data = [
     title: "REDBULL COFFE CANNED DRINK",
     oldPrice: "N80000",
     newPrice: "N50000",
+    detail: "/product6",
   },
 
   {
@@ -62,6 +68,7 @@ const data = [
     title: "LIPTON ICE TEA LEMON 450ML",
     oldPrice: "N80000",
     newPrice: "N50000",
+    detail: "/product7",
   },
 
   {
@@ -70,6 +77,7 @@ const data = [
     title: "NESTLE PURE LIFE REGULAR WATER",
     oldPrice: "N80000",
     newPrice: "N50000",
+    detail: "/product8",
   },
 ];
 const FlashSale = () => {
@@ -82,7 +90,7 @@ const FlashSale = () => {
         </div>
       </div>
       <div className="flash-sale-cards">
-        {data.map(({ id, image, title, oldPrice, newPrice }) => {
+        {data.map(({ id, image, title, oldPrice, newPrice, detail }) => {
           return (
             <article key={id} className="item-details">
               <div className="item-image">
@@ -97,7 +105,7 @@ const FlashSale = () => {
               <div className="item-cta">
                 <button className="add-cart">Add to cart</button>
 
-                <Link to="/product" className="buy-now-link">
+                <Link to={detail} className="buy-now-link">
                   <button className="buy-now">buy Now</button>
                 </Link>
               </div>
