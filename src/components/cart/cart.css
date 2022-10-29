@@ -167,3 +167,21 @@
   background: var(--white-color);
   color: var(--primary-color);
 }
+
+@media screen and (max-width: 1024px) {
+  .cart-container .cart-bar {
+    display: none;
+  }
+
+  .cart-container .checkout-head {
+    display: none;
+  }
+
+  .cart-container .cart-head {
+    border-bottom: none;
+  }
+
+  .navigator h3 {
+    font-size: 1rem;
+  }
+}

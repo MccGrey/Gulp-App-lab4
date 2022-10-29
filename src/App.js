@@ -18,6 +18,7 @@ import Detail5 from "./components/detail5/Detail5";
 import Detail6 from "./components/detail6/Detail6";
 import Detail7 from "./components/detail7/Detail7";
 import Detail8 from "./components/detail8/Detail8";
+import Success from "./components/success/Success";
 
 const App = () => {
   return (
@@ -38,6 +39,7 @@ const App = () => {
           <Route path="/product6" element={<Detail6 />} />
           <Route path="/product7" element={<Detail7 />} />
           <Route path="/product8" element={<Detail8 />} />
+          <Route path="/success" element={<Success />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/cart" element={<Cart />} />
