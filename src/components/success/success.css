@@ -8,10 +8,26 @@
   color: var(--black-color);
   font-weight: 400;
   text-align: center;
+  margin-bottom: 3rem;
 }
 .success-container {
   width: 50%;
   margin: auto;
+}
+
+.success-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.success-icon {
+  font-size: 15rem;
+  color: var(--white-color);
+  background: var(--primary-color);
+  padding: 5px 20px;
+  border-radius: 50%;
 }
 
 .success-details {
@@ -31,4 +47,25 @@
   color: var(--primary-color);
   font-weight: 400;
   text-align: center;
+  margin-bottom: 5rem;
+}
+.success-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-btn {
+  font-family: "oswald", sans-serif;
+  padding: 7px 35px;
+  background: var(--primary-color);
+  color: var(--white-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.success-btn:hover {
+  background: var(--white-color);
+  color: var(--primary-color);
 }
