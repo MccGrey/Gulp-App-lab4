@@ -30,7 +30,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .summary-checkout h3 {
@@ -111,5 +111,10 @@
 
   .payment-logo img {
     width: 40px;
+  }
+
+  .summary-checkout {
+    margin: 1rem;
+    margin-left: 4rem;
   }
 }
