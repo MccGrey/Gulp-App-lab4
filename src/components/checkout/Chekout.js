@@ -21,12 +21,14 @@ const Chekout = () => {
               <h3 className="product-title">Item</h3>
 
               <h3 className="quantity">Quantity</h3>
-              <h3 className="total">Total</h3>
+              <h3 className="total total-checkout">Total</h3>
             </div>
             <div className="cart-items">
               <div className="cart-item">
                 <div className="cart-product">
-                  <h3 className="item-name">HENNESSY VSOP 75CL</h3>
+                  <h3 className="item-name item-name-checkout">
+                    HENNESSY VSOP 75CL
+                  </h3>
                 </div>
 
                 <div className="item-quantity">
