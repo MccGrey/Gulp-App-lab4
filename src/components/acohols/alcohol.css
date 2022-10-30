@@ -29,3 +29,13 @@
 .white-wine {
   padding: 20px;
 }
+
+@media screen and (max-width: 600px) {
+  .top-selling-cta .add-cart {
+    padding: 8px 42px;
+  }
+
+  .cognac-cards .top-selling-details .top-selling-cta .add-cart {
+    padding: 8px 35px;
+  }
+}

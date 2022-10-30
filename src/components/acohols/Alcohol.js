@@ -39,7 +39,7 @@ const Alcohol = () => {
     {
       id: 2,
       image: GIN2,
-      title: "GORDONS LONDON DRY GIN 75CL",
+      title: "GORDONS LONDON DRY GIN",
       price: "N50000",
     },
   ];
@@ -48,7 +48,7 @@ const Alcohol = () => {
     {
       id: 3,
       image: CREAM1,
-      title: "DOMAINE PRE CLOS D’ANJOU ROSE (FRANCE)",
+      title: "DOMAINE PRE CLOS D’ANJOU",
       price: "N50000",
     },
 

@@ -10,7 +10,7 @@ const Button2 = () => {
             <button>Juice</button>
           </a>{" "}
           <a href="#soft-drinks">
-            <button>Soft Drinks</button>
+            <button>Soft</button>
           </a>
           <a href="#water">
             <button>Water</button>
@@ -26,7 +26,7 @@ const Button2 = () => {
             <button>Iced Tea</button>
           </a>
           <a href="#non-alc-wine">
-            <button>Non Alc Wine </button>
+            <button>Non Alc</button>
           </a>
         </div>
         <div className="horizontal"></div>
