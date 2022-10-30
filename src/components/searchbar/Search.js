@@ -6,12 +6,11 @@ const Search = () => {
   return (
     <div className="search-container">
       <select>
-        <option value="grape">All Categories</option>
-        <option value="grape">Graope fruit</option>
+        <option value="grape">All Categories</option>{" "}
+        <option value="grape">Non Alcoholic Drinks</option>
         <option select="true" value="grape">
-          Graope fruit
+          Alcoholic Drinks
         </option>
-        <option value="grape">Graope fruit</option>
       </select>
 
       <input type="search" className="search-box" />
