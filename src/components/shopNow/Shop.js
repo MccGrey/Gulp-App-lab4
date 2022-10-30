@@ -30,7 +30,7 @@ const Shop = () => {
     {
       id: 3,
       image: SHOP3,
-      title: "DOMAINE PRE CLOS D’ANJOU ROSE (FRANCE)",
+      title: "DOMAINE PRE CLOS D’ANJOU",
       price: "N50000",
     },
 
