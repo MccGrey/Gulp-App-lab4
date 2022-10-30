@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import DET5 from "../../assets/CHIVITA APPLLE JUICE 100CL.png";
 
-const detail5 = () => {
+const Detail5 = () => {
+  const [quantity, setQuantity] = useState(1);
+  const handleDecrement = () => {
+    if (quantity > 1) {
+      setQuantity((prevCount) => prevCount - 1);
+    }
+  };
+
+  const handleIncrement = () => {
+    if (quantity < 10) {
+      setQuantity((prevCount) => prevCount + 1);
+    }
+  };
   return (
     <>
       <section className="product-detail-section">
@@ -24,9 +36,9 @@ const detail5 = () => {
                   <h3>x12</h3>
                 </div>
                 <div className="detail-item-quantity">
-                  <button>-</button>
-                  <div className="count">5</div>
-                  <button>+</button>
+                  <button onClick={handleDecrement}>-</button>
+                  <div className="count">{quantity}</div>
+                  <button onClick={handleIncrement}>+</button>
                 </div>
                 <div className="deatil-amount">N50000</div>
               </div>
@@ -54,4 +66,4 @@ const detail5 = () => {
   );
 };
 
-export default detail5;
+export default Detail5;

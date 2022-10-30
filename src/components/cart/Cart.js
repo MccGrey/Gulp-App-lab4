@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
 import "./cart.css";
 import CART from "../../assets/HENNESSY VSOP 75CL.png";
 
 const Cart = () => {
+  const [quantity, setQuantity] = useState(1);
+
+  const handleDecrement = () => {
+    if (quantity > 1) {
+      setQuantity((prevCount) => prevCount - 1);
+    }
+  };
+
+  const handleIncrement = () => {
+    if (quantity < 10) {
+      setQuantity((prevCount) => prevCount + 1);
+    }
+  };
+
   return (
     <>
       <section className="cart-section">
@@ -34,9 +48,9 @@ const Cart = () => {
               </div>
               <div className="item-price item-price-cart">N50000</div>
               <div className="item-quantity item-quantity-carts">
-                <button>-</button>
-                <div className="count">0</div>
-                <button>+</button>
+                <button onClick={handleDecrement}>-</button>
+                <div className="count">{quantity}</div>
+                <button onClick={handleIncrement}>+</button>
               </div>
               <div className="item-total">N50000</div>
             </div>
