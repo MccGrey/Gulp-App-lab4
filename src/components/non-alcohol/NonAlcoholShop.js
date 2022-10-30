@@ -37,7 +37,7 @@ const NonAlcoholShop = () => {
     {
       id: 2,
       image: JUICE2,
-      title: "GORDONS LONDON DRY GIN 75CL",
+      title: "GORDONS LONDON DRY GIN",
       price: "N50000",
     },
   ];
@@ -46,7 +46,7 @@ const NonAlcoholShop = () => {
     {
       id: 3,
       image: SOFT1,
-      title: "DOMAINE PRE CLOS D’ANJOU ROSE (FRANCE)",
+      title: "DOMAINE PRE CLOS D’ANJOU",
       price: "N50000",
     },
 

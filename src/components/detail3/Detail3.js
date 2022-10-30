@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import DET3 from "../../assets/Bombay Sapphire 75cl (x12).png";
 
-const detail3 = () => {
+const Detail3 = () => {
+  const [quantity, setQuantity] = useState(1);
+  const handleDecrement = () => {
+    if (quantity > 1) {
+      setQuantity((prevCount) => prevCount - 1);
+    }
+  };
+
+  const handleIncrement = () => {
+    if (quantity < 10) {
+      setQuantity((prevCount) => prevCount + 1);
+    }
+  };
   return (
     <>
       <section className="product-detail-section">
@@ -24,9 +36,9 @@ const detail3 = () => {
                   <h3>x12</h3>
                 </div>
                 <div className="detail-item-quantity">
-                  <button>-</button>
-                  <div className="count">5</div>
-                  <button>+</button>
+                  <button onClick={handleDecrement}>-</button>
+                  <div className="count">{quantity}</div>
+                  <button onClick={handleIncrement}>+</button>
                 </div>
                 <div className="deatil-amount">N50000</div>
               </div>
@@ -54,4 +66,4 @@ const detail3 = () => {
   );
 };
 
-export default detail3;
+export default Detail3;

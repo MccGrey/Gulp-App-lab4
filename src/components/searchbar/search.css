@@ -32,3 +32,14 @@ select {
   background: var(--white-color);
   border: none;
 }
+@media screen and (max-width: 600px) {
+  .search-box {
+    width: 150px;
+    height: 36px;
+  }
+
+  select {
+    width: 120px;
+    height: 36px;
+  }
+}

@@ -88,6 +88,9 @@
 }
 
 @media screen and (max-width: 600px) {
+  .cart-container {
+    padding-top: 4rem;
+  }
   .cart-items .cart-item .cart-product .item-name-checkout {
     font-size: 0.9rem;
   }
@@ -116,5 +119,22 @@
   .summary-checkout {
     margin: 1rem;
     margin-left: 4rem;
+  }
+
+  .cart-container h4 {
+    text-align: center;
+  }
+
+  .navigator .checkout-heading {
+    display: block;
+    border-bottom: none;
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+  .cart-container h4 {
+    font-size: 28px;
+    color: var(--black-color);
+    font-weight: 400;
   }
 }

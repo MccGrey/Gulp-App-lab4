@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import DET8 from "../../assets/NESTLE PURE LIFE REGULAR WATER 600ML.png";
 
-const detail8 = () => {
+const Detail8 = () => {
+  const [quantity, setQuantity] = useState(1);
+  const handleDecrement = () => {
+    if (quantity > 1) {
+      setQuantity((prevCount) => prevCount - 1);
+    }
+  };
+
+  const handleIncrement = () => {
+    if (quantity < 10) {
+      setQuantity((prevCount) => prevCount + 1);
+    }
+  };
   return (
     <>
       <section className="product-detail-section">
@@ -24,9 +36,9 @@ const detail8 = () => {
                   <h3>x12</h3>
                 </div>
                 <div className="detail-item-quantity">
-                  <button>-</button>
-                  <div className="count">5</div>
-                  <button>+</button>
+                  <button onClick={handleDecrement}>-</button>
+                  <div className="count">{quantity}</div>
+                  <button onClick={handleIncrement}>+</button>
                 </div>
                 <div className="deatil-amount">N50000</div>
               </div>
@@ -54,4 +66,4 @@ const detail8 = () => {
   );
 };
 
-export default detail8;
+export default Detail8;

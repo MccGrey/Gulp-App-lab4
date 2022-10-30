@@ -26,7 +26,7 @@ const Button = () => {
         </a>
 
         <a href="#white-wine">
-          <button>White Wine</button>
+          <button>Wine</button>
         </a>
 
         <a href="#rose">

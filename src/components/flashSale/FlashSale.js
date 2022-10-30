@@ -14,7 +14,7 @@ const data = [
   {
     id: 1,
     image: IMG1,
-    title: "BAILEY IRISH CREAM DELIGHT 75cl",
+    title: "BAILEY IRISH CREAM DELIGHT",
     oldPrice: "N80000",
     newPrice: "N50000",
     detail: "/product",
@@ -74,7 +74,7 @@ const data = [
   {
     id: 8,
     image: IMG8,
-    title: "NESTLE PURE LIFE REGULAR WATER",
+    title: "NESTLE PURE LIFE REGULAR",
     oldPrice: "N80000",
     newPrice: "N50000",
     detail: "/product8",
