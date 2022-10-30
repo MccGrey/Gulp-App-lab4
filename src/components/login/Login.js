@@ -9,7 +9,7 @@ const Login = () => {
         <div className="login">
           <h3>Sign-In</h3>
           <h4>
-            Do you have an account? <a href="/signup">click here</a> to sign up{" "}
+            Do you have an account? <a href="/signup">click here</a> to sign up
           </h4>
           <form>
             <label>E-mail</label>
