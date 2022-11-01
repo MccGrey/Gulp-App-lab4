@@ -25,7 +25,7 @@ import NONALCWINE3 from "../../assets/EVA SPARKLING RED GRAPE DRINK 750ML.png";
 import NONALCWINE4 from "../../assets/EVA SPARKLING RED GRAPE DRINK 750ML.png";
 import "./nonAlcoholShop.css";
 
-const NonAlcoholShop = () => {
+const NonAlcoholShop = (props) => {
   const data = [
     {
       id: 1,

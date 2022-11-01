@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./components/navbar/Navbar";
 import AlcoholicDrinks from "./pages/AlcoholicDrinks";
 import NonAlcoholicDrinks from "./pages/NonAlcoholicDrinks";
@@ -21,6 +21,9 @@ import Detail8 from "./components/detail8/Detail8";
 import Success from "./components/success/Success";
 
 const App = () => {
+  const [cartItems, setCartItems] = useState([]);
+  //add to cart function
+
   return (
     <>
       <Navbar />
@@ -42,7 +45,7 @@ const App = () => {
           <Route path="/success" element={<Success />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/cart" element={<Cart cartItems={cartItems} />} />
           <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </div>
