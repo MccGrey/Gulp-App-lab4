@@ -156,3 +156,33 @@
   background: var(--white-color);
   color: var(--primary-color);
 }
+
+@media screen and (max-width: 1024px) {
+  .details-heading h3 {
+    font-size: 16px;
+  }
+
+  .detail-item-quantity {
+    padding-right: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .details-container {
+    grid-template-columns: 1fr;
+    margin-top: -2rem;
+  }
+
+  .details-heading h3 {
+    font-size: 14px;
+  }
+
+  .detailed-description p {
+    text-align: center;
+    margin-left: 3rem;
+  }
+
+  .detail-main-conatiner .detail-addtocart {
+    margin-left: 4rem;
+  }
+}
