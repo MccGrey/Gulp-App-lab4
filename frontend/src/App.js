@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./components/navbar/Navbar";
 import AlcoholicDrinks from "./pages/AlcoholicDrinks";
 import NonAlcoholicDrinks from "./pages/NonAlcoholicDrinks";
@@ -21,6 +21,20 @@ import Detail8 from "./components/detail8/Detail8";
 import Success from "./components/success/Success";
 
 const App = () => {
+  const [cartItems, setCartItems] = useState([]);
+  //add to cart function
+  const onAdd = (product) => {
+    const exist = cartItems.find((x) => x.id === product.id);
+    if (exist) {
+      setCartItems(
+        cartItems.map((x) =>
+          x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
+        )
+      );
+    } else {
+      setCartItems([...cartItems, { ...product, qty: 1 }]);
+    }
+  };
   return (
     <>
       <Navbar />
@@ -29,7 +43,10 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/legality" element={<Alcohol />} />
           <Route path="/alcoholicDrinks" element={<AlcoholicDrinks />} />
-          <Route path="/nonAlcoholicDrinks" element={<NonAlcoholicDrinks />} />
+          <Route
+            path="/nonAlcoholicDrinks"
+            element={<NonAlcoholicDrinks onAdd={onAdd} />}
+          />
           <Route path="/shop" element={<Shop />} />
           <Route path="/product" element={<Details />} />
           <Route path="/product2" element={<Detail2 />} />
@@ -42,7 +59,10 @@ const App = () => {
           <Route path="/success" element={<Success />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route
+            path="/cart"
+            element={<Cart cartItems={cartItems} onAdd={onAdd} />}
+          />
           <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </div>

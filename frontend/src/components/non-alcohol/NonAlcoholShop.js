@@ -25,7 +25,7 @@ import NONALCWINE3 from "../../assets/EVA SPARKLING RED GRAPE DRINK 750ML.png";
 import NONALCWINE4 from "../../assets/EVA SPARKLING RED GRAPE DRINK 750ML.png";
 import "./nonAlcoholShop.css";
 
-const NonAlcoholShop = () => {
+const NonAlcoholShop = (props) => {
   const data = [
     {
       id: 1,
@@ -207,7 +207,7 @@ const NonAlcoholShop = () => {
       price: "N50000",
     },
   ];
-
+  const { onAdd } = props;
   return (
     <div className="main">
       <section className="top-selling gin" id="juice">
@@ -228,7 +228,9 @@ const NonAlcoholShop = () => {
                   <h4>{price}</h4>
                 </div>
                 <div className="top-selling-cta">
-                  <button className="add-cart">Add to cart</button>
+                  <button className="add-cart" onClick={onAdd}>
+                    Add to cart
+                  </button>
                 </div>
               </article>
             );
