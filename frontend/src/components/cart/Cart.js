@@ -35,7 +35,7 @@ const Cart = (props) => {
         <div className="cart-condition">
           {cartItems.length === 0 && <div>Cart is empty</div>}
 
-          {/* <div className="cart-content">
+          <div className="cart-content">
             <div className="cart-content-container">
               <h3 className="order">Your Order</h3>
               <div className="cart-title">
@@ -74,7 +74,7 @@ const Cart = (props) => {
                 </button>
               </Link>
             </div>
-          </div> */}
+          </div>
         </div>
         <Footer />
       </section>
