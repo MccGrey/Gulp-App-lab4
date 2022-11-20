@@ -2,6 +2,14 @@
 
 This gulp drinks web app is am odering nd delivery web app that allows you order and drink of your choice and have it delivered to your door step.
 
+## Illustration
+
+![Algorithm schema](demo1.png)
+
+## Live demo
+
+https://gulp-drinks.netlify.app
+
 ## Installation
 
 for new users of this project, you will need to install the dependencies. To do this, run the following command in the terminal:
