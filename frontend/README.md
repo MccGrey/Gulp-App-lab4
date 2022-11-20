@@ -2,6 +2,8 @@
 
 This gulp drinks web app is am odering nd delivery web app that allows you order and drink of your choice and have it delivered to your door step.
 
+![Algorithm schema](bulb.png)
+
 ## Installation
 
 for new users of this project, you will need to install the dependencies. To do this, run the following command in the terminal:
