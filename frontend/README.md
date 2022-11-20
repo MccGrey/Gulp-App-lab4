@@ -8,7 +8,7 @@ This gulp drinks web app is am odering nd delivery web app that allows you order
 
 ## Live demo
 
-gulp-drinks.netlify.app
+https://gulp-drinks.netlify.app
 
 ## Installation
 
