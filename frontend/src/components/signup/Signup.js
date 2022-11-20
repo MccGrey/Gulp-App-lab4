@@ -1,8 +1,38 @@
-import React from "react";
+import React,{useState} from "react";
 import Footer from "../footer/Footer";
 import "./signup.css";
+import { login } from "../../services/auth";
+
+
+
+
+
 
 const Signup = () => {
+  const [user, setUser] = useState({
+    firstname :'', lastname :'',email: '', password:'', confirmPassword:'',phone: '', address:''
+  })
+
+  const handleChange = (e)=> {
+    const {name, value} = e.target;
+    setUser((prev) => ({...prev, [name]:value}))
+  }
+
+
+  const createUser = () => {
+    console.log(user)
+    const payload = {
+      name: user?.firstname + ' ' + user?.lastname,
+      email: user?.email,
+      password: user?.password, 
+      confirmPassword: user?.password,
+      phoneNumber: user?.phone
+    }
+    login(payload)
+  }
+
+
+
   return (
     <>
       <section className="login-container">
@@ -15,32 +45,32 @@ const Signup = () => {
             <div>
               <label>First Name</label>
 
-              <input type="text" placeholder="mccgrey" />
+              <input type="text" name="firstname" placeholder="mccgrey"  value={user?.firstname}  onChange={handleChange}/>
             </div>{" "}
             <div>
               <label>Last Name</label>
 
-              <input type="text" placeholder="Neliux" />
+              <input type="text" name="lastname" placeholder="Neliux" value={user?.lastname} onChange={handleChange}/>
             </div>
             <div>
               <label>E-mail</label>
 
-              <input type="email" placeholder="mccgrey@Slice.com" />
+              <input type="email" name="email" placeholder="mccgrey@Slice.com" value={user?.email} onChange={handleChange}/>
             </div>
             <div>
               <label>Password</label>
 
-              <input type="password" placeholder="enter your password" />
+              <input type="password" name='password' placeholder="enter your password"  value={user?.password} onChange={handleChange}/>
             </div>
             <div>
               <label>Phone</label>
 
-              <input type="email" placeholder="080x-xxx-xxxx" />
+              <input type="phone" name="phone" placeholder="080x-xxx-xxxx" value={user?.phone}  onChange={handleChange}/>
             </div>
             <div>
               <label>Confirm Password</label>
 
-              <input type="email" placeholder="Confirm-Password" />
+              <input type="password" name="confirmPassword" placeholder="Confirm-Password"  onChange={handleChange}/>
             </div>
             <div>
               <label>Street Address</label>
@@ -55,8 +85,9 @@ const Signup = () => {
             <select></select>
           </div>
           <button
+          disabled={user?.firstname && user?.lastname && user?.email  ?false: true}
             className="signup-button"
-            onClick={console.log("successfully created an account")}
+            onClick={createUser}
           >
             Sign Up
           </button>
