@@ -12,7 +12,7 @@ const Legality = () => {
           <Link to="/legality">
             <button className="btn-yes">Yes, I am 18 or over</button>
           </Link>
-          <Link to="/">
+          <Link to="/nonAlcoholicDrinks">
             <button className="btn-no">No, I am under 18</button>
           </Link>
         </div>
