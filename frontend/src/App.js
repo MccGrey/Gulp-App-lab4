@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import { Route, Routes } from "react-router-dom";
 import Shop from "../src/components/shopNow/Shop";
 import Alcohol from "./components/acohols/Alcohol";
-import Login from "./components/login/Login";
+import Signin from "./components/login/Signin";
 import Cart from "./components/cart/Cart";
 import Signup from "./components/signup/Signup";
 import Checkout from "./components/checkout/Chekout";
@@ -57,7 +57,7 @@ const App = () => {
           <Route path="/product7" element={<Detail7 />} />
           <Route path="/product8" element={<Detail8 />} />
           <Route path="/success" element={<Success />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
           <Route
             path="/cart"
