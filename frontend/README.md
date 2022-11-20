@@ -2,7 +2,7 @@
 
 This gulp drinks web app is am odering nd delivery web app that allows you order and drink of your choice and have it delivered to your door step.
 
-![Algorithm schema](bulb.png)
+![Algorithm schema](demo1.png)
 
 ## Installation
 
