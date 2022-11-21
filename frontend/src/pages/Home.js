@@ -7,13 +7,12 @@ import TopCategory from "../components/topCategories/TopCategory";
 import TopSelling from "../components/topSelling/TopSelling";
 import Footer from "../components/footer/Footer";
 import SectionHero from "../components/section-hero/SectionHero";
-import {login} from '../services/auth';
+import { login } from "../services/auth";
 
 const Home = () => {
-
-  const loginPayload = async(payload)=> {
-    await login(payload)
-  }
+  const loginPayload = async (payload) => {
+    await login(payload);
+  };
   return (
     <div>
       <Search />

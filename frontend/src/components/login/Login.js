@@ -6,7 +6,7 @@ const Login = () => {
   return (
     <>
       <section className="login-container">
-        <div className="login">  
+        <div className="login">
           <h3>Sign-In</h3>
           <h4>
             Do you have an account? <a href="/signup">click here</a> to sign up
