@@ -9,6 +9,8 @@ import LOGO from "../../assets/logodark.png";
 
 export default function Navbar() {
   const navRef = useRef();
+const  user = JSON.parse(localStorage.getItem("user"))
+console.log(user.name)
 
   const showNavbar = () => {
     navRef.current.classList.toggle("responsive-nav");
@@ -34,8 +36,7 @@ export default function Navbar() {
         <div className="nav-icons">
           <Link to="/signin">
             <span className="profile">
-              <FaUserAlt />
-            </span>
+              <FaUserAlt />{user?.name}</span>
           </Link>
           <Link to="/cart">
             <span>

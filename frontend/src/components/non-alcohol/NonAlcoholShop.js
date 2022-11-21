@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import JUICE1 from "../../assets/CHIVITA APPLLE JUICE 100CL.png";
 import JUICE2 from "../../assets/CHIVITA APPLLE JUICE 100CL.png";
 import SOFT1 from "../../assets/COCA COLA 50cl (PET)x12.png";
@@ -26,187 +27,74 @@ import NONALCWINE4 from "../../assets/EVA SPARKLING RED GRAPE DRINK 750ML.png";
 import "./nonAlcoholShop.css";
 
 const NonAlcoholShop = (props) => {
-  const data = [
-    {
-      id: 1,
-      image: JUICE1,
-      title: "Bombay Sapphire 75cl (x12)",
-      price: "N50000",
-    },
+  const [juice, setJuice] = useState([]);
+  const [softDrinks, setSoftDrinks] = useState([]);
+  const [water, setWater] = useState([]);
+  const [energyDrinks, setEnergyDrinks] = useState([]);
+  const [malt, setMalt] = useState([]);
+  const [iceTea, setIceTea] = useState([]);
+  const [nonAlcoholicWine, setNonAlcoholicWine] = useState([]);
 
-    {
-      id: 2,
-      image: JUICE2,
-      title: "GORDONS LONDON DRY GIN",
-      price: "N50000",
-    },
-  ];
+  // console.log([juice])
+  const getCategoryProduct = async (category, subcategory) => {
+    var config = {
+      method: "get",
+      url: `https://test-applet-5.herokuapp.com/api/v1/products/product?category=${category}&subCategory=${subcategory}`,
+      headers: {
+        Accept: "application/json",
+      },
+    };
 
-  const data1 = [
-    {
-      id: 3,
-      image: SOFT1,
-      title: "DOMAINE PRE CLOS D’ANJOU",
-      price: "N50000",
-    },
+    axios(config)
+      .then(function (response) {
+        console.log(subcategory);
+        if (subcategory === "Juice") {
+          setJuice(response?.data?.productListing);
+          //  console.log(response.data);
+        }
+        if (subcategory === "Soft Drink") {
+          setSoftDrinks(response?.data?.productListing);
+        }
+        if (subcategory === "Water") {
+          setWater(response?.data?.productListing);
+        }
+        if (subcategory === "Energy Drink") {
+          setEnergyDrinks(response?.data?.productListing);
+        }
+        if (subcategory === "Malt") {
+          setMalt(response?.data?.productListing);
+        }
+        if (subcategory === "Iced tea") {
+          setIceTea(response?.data?.productListing);
+        }
+        if (subcategory === "Non-Alcoholic Wine") {
+          setNonAlcoholicWine(response?.data?.productListing);
+        }
+      })
+      .catch(function (error) {
+        console.log(error.message);
+      });
+  };
+  useEffect(() => {
+    getCategoryProduct("Non-Alcoholic", "Juice");
+    getCategoryProduct("Non-Alcoholic", "Soft Drink");
+    getCategoryProduct("Non-Alcoholic", "Water");
+    getCategoryProduct("Non-Alcoholic", "Energy Drink");
+    getCategoryProduct("Non-Alcoholic", "Malt");
+    getCategoryProduct("Non-Alcoholic", "Iced tea");
+    getCategoryProduct("Non-Alcoholic", "Non-Alcoholic Wine");
+  }, []);
 
-    {
-      id: 4,
-      image: SOFT2,
-      title: "COCA COLA 50cl (PET)x12",
-      price: "N50000",
-    },
+  const data1 = softDrinks;
+  const data2 = water;
 
-    {
-      id: 5,
-      image: SOFT3,
-      title: "BAILEYS IRISH CREAM DELIGHT 75CL",
-      price: "N50000",
-    },
+  const data3 = energyDrinks;
 
-    {
-      id: 6,
-      image: SOFT4,
-      title: "BAILEYS IRISH CREAM DELIGHT 75CL",
-      price: "N50000",
-    },
-  ];
+  const data4 = malt;
 
-  const data2 = [
-    {
-      id: 9,
-      image: WATER1,
-      title: "JACK DANIELS NO 7",
-      price: "N50000",
-    },
+  const data5 = iceTea;
 
-    {
-      id: 10,
-      image: WATER2,
-      title: "GLENFIDDICH 18YEARS",
-      price: "N50000",
-    },
-
-    {
-      id: 11,
-      image: WATER3,
-      title: "JACK DANIELS NO 7",
-      price: "N50000",
-    },
-  ];
-
-  const data3 = [
-    {
-      id: 12,
-      image: ENERGY1,
-      title: "JACK DANIELS NO 7",
-      price: "N50000",
-    },
-
-    {
-      id: 13,
-      image: ENERGY2,
-      title: "JACK DANIELS NO 7",
-      price: "N50000",
-    },
-
-    {
-      id: 14,
-      image: ENERGY3,
-      title: "JACK DANIELS NO 7",
-      price: "N50000",
-    },
-
-    {
-      id: 15,
-      image: ENERGY4,
-      title: "JACK DANIELS NO 7",
-      price: "N50000",
-    },
-  ];
-
-  const data4 = [
-    {
-      id: 16,
-      image: MALT1,
-      title: "JACK DANIELS NO 7",
-      price: "N50000",
-    },
-
-    {
-      id: 17,
-      image: MALT2,
-      title: "JACK DANIELS NO 7",
-      price: "N50000",
-    },
-
-    {
-      id: 18,
-      image: MALT3,
-      title: "JACK DANIELS NO 7",
-      price: "N50000",
-    },
-
-    {
-      id: 19,
-      image: MALT4,
-      title: "JACK DANIELS NO 7",
-      price: "N50000",
-    },
-  ];
-
-  const data5 = [
-    {
-      id: 20,
-      image: ICETEA1,
-      title: "JACK DANIELS NO 7",
-      price: "N50000",
-    },
-
-    {
-      id: 21,
-      image: ICETEA2,
-      title: "JACK DANIELS NO 7",
-      price: "N50000",
-    },
-
-    {
-      id: 22,
-      image: ICETEA3,
-      title: "JACK DANIELS NO 7",
-      price: "N50000",
-    },
-  ];
-
-  const data6 = [
-    {
-      id: 22,
-      image: NONALCWINE1,
-      title: "JACK DANIELS NO 7",
-      price: "N50000",
-    },
-
-    {
-      id: 22,
-      image: NONALCWINE2,
-      title: "JACK DANIELS NO 7",
-      price: "N50000",
-    },
-
-    {
-      id: 22,
-      image: NONALCWINE3,
-      title: "JACK DANIELS NO 7",
-      price: "N50000",
-    },
-
-    {
-      id: 22,
-      image: NONALCWINE4,
-      title: "JACK DANIELS NO 7",
-      price: "N50000",
-    },
-  ];
+  const data6 = nonAlcoholicWine;
   const { onAdd } = props;
   return (
     <div className="main">
@@ -216,14 +104,14 @@ const NonAlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards gin-cards">
-          {data.map(({ id, image, title, price }) => {
+          {juice?.map(({ id, images, productName, price }) => {
             return (
               <article key={id} className="top-selling-details">
                 <div className="top-selling-image">
-                  <img src={image} alt={title} data={data} />
+                  <img src={images} alt={productName} />
                 </div>
 
-                <h3>{title}</h3>
+                <h3>{productName}</h3>
                 <div className="top-selling-prices">
                   <h4>{price}</h4>
                 </div>
@@ -244,14 +132,14 @@ const NonAlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards cream-cards">
-          {data1.map(({ id, image, title, price }) => {
+          {data1.map(({ id, images, productName, price }) => {
             return (
               <article key={id} className="top-selling-details">
                 <div className="top-selling-image">
-                  <img src={image} alt={title} data={data1} />
+                  <img src={images} alt={productName} data={data1} />
                 </div>
 
-                <h3>{title}</h3>
+                <h3>{productName}</h3>
                 <div className="top-selling-prices">
                   <h4>{price}</h4>
                 </div>
@@ -270,14 +158,14 @@ const NonAlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards whiskey-cards">
-          {data2.map(({ id, image, title, price }) => {
+          {data2.map(({ id, images, productName, price }) => {
             return (
               <article key={id} className="top-selling-details">
                 <div className="top-selling-image">
-                  <img src={image} alt={title} data={data2} />
+                  <img src={images} alt={productName} data={data2} />
                 </div>
 
-                <h3>{title}</h3>
+                <h3>{productName}</h3>
                 <div className="top-selling-prices">
                   <h4>{price}</h4>
                 </div>
@@ -296,14 +184,14 @@ const NonAlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards cognac-cards">
-          {data3.map(({ id, image, title, price }) => {
+          {data3.map(({ id, images, productName, price }) => {
             return (
               <article key={id} className="top-selling-details ">
                 <div className="top-selling-image">
-                  <img src={image} alt={title} data={data3} />
+                  <img src={images} alt={productName} data={data3} />
                 </div>
 
-                <h3>{title}</h3>
+                <h3>{productName}</h3>
                 <div className="top-selling-prices">
                   <h4>{price}</h4>
                 </div>
@@ -322,14 +210,14 @@ const NonAlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards red-wine-cards">
-          {data4.map(({ id, image, title, price }) => {
+          {data4.map(({ id, images, productName, price }) => {
             return (
               <article key={id} className="top-selling-details">
                 <div className="top-selling-image">
-                  <img src={image} alt={title} data={data4} />
+                  <img src={images} alt={productName} />
                 </div>
 
-                <h3>{title}</h3>
+                <h3>{productName}</h3>
                 <div className="top-selling-prices">
                   <h4>{price}</h4>
                 </div>
@@ -348,14 +236,14 @@ const NonAlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards white-wine-cards">
-          {data5.map(({ id, image, title, price }) => {
+          {data5.map(({ id, images, productName, price }) => {
             return (
               <article key={id} className="top-selling-details">
                 <div className="top-selling-image">
-                  <img src={image} alt={title} data={data5} />
+                  <img src={images} alt={productName} data={data5} />
                 </div>
 
-                <h3>{title}</h3>
+                <h3>{productName}</h3>
                 <div className="top-selling-prices">
                   <h4>{price}</h4>
                 </div>
@@ -374,14 +262,14 @@ const NonAlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards rose-cards">
-          {data6.map(({ id, image, title, price }) => {
+          {data6.map(({ id, images, productName, price }) => {
             return (
               <article key={id} className="top-selling-details">
                 <div className="top-selling-image">
-                  <img src={image} alt={title} data={data6} />
+                  <img src={images} alt={productName} data={data6} />
                 </div>
 
-                <h3>{title}</h3>
+                <h3>{productName}</h3>
                 <div className="top-selling-prices">
                   <h4>{price}</h4>
                 </div>
