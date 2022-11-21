@@ -25,6 +25,9 @@ import NONALCWINE2 from "../../assets/EVA SPARKLING RED GRAPE DRINK 750ML.png";
 import NONALCWINE3 from "../../assets/EVA SPARKLING RED GRAPE DRINK 750ML.png";
 import NONALCWINE4 from "../../assets/EVA SPARKLING RED GRAPE DRINK 750ML.png";
 import "./nonAlcoholShop.css";
+import Button from "../../components/buttons/Button";
+import Footer from "../footer/Footer";
+
 
 const NonAlcoholShop = (props) => {
   const [juice, setJuice] = useState([]);
@@ -98,6 +101,7 @@ const NonAlcoholShop = (props) => {
   const { onAdd } = props;
   return (
     <div className="main">
+      <Button />
       <section className="top-selling gin" id="juice">
         <div className="heading">
           <h3>JUICE</h3>
@@ -281,6 +285,7 @@ const NonAlcoholShop = (props) => {
           })}
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
