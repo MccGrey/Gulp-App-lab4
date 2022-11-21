@@ -12,3 +12,29 @@ export const login = async(payload) => {
         return error
     }
 }
+
+export const signin = async(payload) => {
+    
+    const response = await axios.post(`${baseURL}auths/signin`, payload);
+    try {
+        console.log(response)
+        return response.data
+    } catch (error) {
+        return error
+    }
+}
+
+
+
+
+
+export const resetpassword = async(payload) => {
+    
+    const response = await axios.post(`${baseURL}auths/resetpassword`, payload);
+    try {
+        console.log(response)
+        return response.data
+    } catch (error) {
+        return error
+    }
+}

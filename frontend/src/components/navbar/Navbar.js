@@ -32,7 +32,7 @@ export default function Navbar() {
         </ul>
 
         <div className="nav-icons">
-          <Link to="/login">
+          <Link to="/signin">
             <span className="profile">
               <FaUserAlt />
             </span>
