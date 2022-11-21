@@ -21,12 +21,12 @@ const Button = () => {
           <button>Cognac </button>
         </a>
 
-        <a href="#red-wine">
-          <button>Red Wine</button>
+        <a href="#wine-red">
+          <button>Wine Red</button>
         </a>
 
-        <a href="#white-wine">
-          <button>Wine</button>
+        <a href="#wine-white">
+          <button>Wine White</button>
         </a>
 
         <a href="#rose">
