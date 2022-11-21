@@ -120,7 +120,7 @@ const AlcoholShop = (props) => {
 
                 <h3>{productName}</h3>
                 <div className="top-selling-prices">
-                  <h4>{price}</h4>
+                  <h4>N{price}</h4>
                 </div>
                 <div className="top-selling-cta">
                 <button className="add-cart" onClick={onAdd}>
@@ -148,7 +148,7 @@ const AlcoholShop = (props) => {
 
                 <h3>{productName}</h3>
                 <div className="top-selling-prices">
-                  <h4>{price}</h4>
+                  <h4>N{price}</h4>
                 </div>
                 <div className="top-selling-cta">
                   <button className="add-cart">Add to cart</button>
@@ -174,7 +174,7 @@ const AlcoholShop = (props) => {
 
                 <h3>{productName}</h3>
                 <div className="top-selling-prices">
-                  <h4>{price}</h4>
+                  <h4>N{price}</h4>
                 </div>
                 <div className="top-selling-cta">
                   <button className="add-cart">Add to cart</button>
@@ -200,7 +200,7 @@ const AlcoholShop = (props) => {
 
                 <h3>{productName}</h3>
                 <div className="top-selling-prices">
-                  <h4>{price}</h4>
+                  <h4>N{price}</h4>
                 </div>
                 <div className="top-selling-cta">
                   <button className="add-cart">Add to cart</button>
@@ -226,7 +226,7 @@ const AlcoholShop = (props) => {
 
                 <h3>{productName}</h3>
                 <div className="top-selling-prices">
-                  <h4>{price}</h4>
+                  <h4>N{price}</h4>
                 </div>
                 <div className="top-selling-cta">
                   <button className="add-cart">Add to cart</button>
@@ -252,7 +252,7 @@ const AlcoholShop = (props) => {
 
                 <h3>{productName}</h3>
                 <div className="top-selling-prices">
-                  <h4>{price}</h4>
+                  <h4>N{price}</h4>
                 </div>
                 <div className="top-selling-cta">
                   <button className="add-cart">Add to cart</button>
@@ -278,7 +278,7 @@ const AlcoholShop = (props) => {
 
                 <h3>{productName}</h3>
                 <div className="top-selling-prices">
-                  <h4>{price}</h4>
+                  <h4>N{price}</h4>
                 </div>
                 <div className="top-selling-cta">
                   <button className="add-cart">Add to cart</button>
