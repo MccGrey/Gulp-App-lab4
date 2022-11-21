@@ -3,6 +3,7 @@ import React,{useState} from "react";
 import Footer from "../footer/Footer";
 import "./login.css";
 import { signin } from "../../services/auth";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -10,6 +11,7 @@ import { signin } from "../../services/auth";
 
 
 const Signin = () => {
+  let navigate = useNavigate()
   const [user, setUser] = useState({
     email: '', password:''
   })
@@ -20,13 +22,16 @@ const Signin = () => {
   }
 
 
-  const signinUser = () => {
+  const signinUser = async () => {
     console.log(user)
     const payload = {
       email: user?.email,
       password: user?.password, 
     }
-    signin(payload)
+    const login = await signin(payload)
+    localStorage.setItem("user", JSON.stringify(login?.data?.user))
+    localStorage.setItem("token", JSON.stringify(login?.data?.token));
+    navigate("/")
   }
 
 
