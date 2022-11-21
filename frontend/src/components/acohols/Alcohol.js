@@ -111,7 +111,7 @@ const AlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards gin-cards">
-          {wineRose?.map(({ id, images, productName, price }) => {
+          {wineRose?.map(({ id, images, productName, price, amountInStock, occasion }) => {
             return (
               <article key={id} className="top-selling-details">
                 <div className="top-selling-image">
@@ -121,7 +121,9 @@ const AlcoholShop = (props) => {
                 <h3>{productName}</h3>
                 <div className="top-selling-prices">
                   <h4>N{price}</h4>
+                  <h4><span>stock-</span>{amountInStock}</h4>
                 </div>
+                <h4>{occasion}</h4>
                 <div className="top-selling-cta">
                 <button className="add-cart" onClick={onAdd}>
                   Add to cart
@@ -139,7 +141,7 @@ const AlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards cream-cards">
-          {data1.map(({ id, images, productName, price }) => {
+          {data1.map(({ id, images, productName, price, amountInStock, occasion }) => {
             return (
               <article key={id} className="top-selling-details">
                 <div className="top-selling-image">
@@ -149,7 +151,9 @@ const AlcoholShop = (props) => {
                 <h3>{productName}</h3>
                 <div className="top-selling-prices">
                   <h4>N{price}</h4>
+                  <h4><span>stock-</span>{amountInStock}</h4>
                 </div>
+                <h4>{occasion}</h4>
                 <div className="top-selling-cta">
                   <button className="add-cart">Add to cart</button>
                 </div>
@@ -165,7 +169,7 @@ const AlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards whiskey-cards">
-          {data2.map(({ id, images, productName, price }) => {
+          {data2.map(({ id, images, productName, price, amountInStock, occasion }) => {
             return (
               <article key={id} className="top-selling-details">
                 <div className="top-selling-image">
@@ -175,7 +179,9 @@ const AlcoholShop = (props) => {
                 <h3>{productName}</h3>
                 <div className="top-selling-prices">
                   <h4>N{price}</h4>
+                  <h4><span>stock-</span>{amountInStock}</h4>
                 </div>
+                <h4>{occasion}</h4>
                 <div className="top-selling-cta">
                   <button className="add-cart">Add to cart</button>
                 </div>
@@ -191,7 +197,7 @@ const AlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards cognac-cards">
-          {data3.map(({ id, images, productName, price }) => {
+          {data3.map(({ id, images, productName, price, amountInStock, occasion }) => {
             return (
               <article key={id} className="top-selling-details ">
                 <div className="top-selling-image">
@@ -201,7 +207,9 @@ const AlcoholShop = (props) => {
                 <h3>{productName}</h3>
                 <div className="top-selling-prices">
                   <h4>N{price}</h4>
+                  <h4><span>stock-</span>{amountInStock}</h4>
                 </div>
+                <h4>{occasion}</h4>
                 <div className="top-selling-cta">
                   <button className="add-cart">Add to cart</button>
                 </div>
@@ -217,7 +225,7 @@ const AlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards red-wine-cards">
-          {data4.map(({ id, images, productName, price }) => {
+          {data4.map(({ id, images, productName, price, amountInStock, occasion }) => {
             return (
               <article key={id} className="top-selling-details">
                 <div className="top-selling-image">
@@ -227,7 +235,9 @@ const AlcoholShop = (props) => {
                 <h3>{productName}</h3>
                 <div className="top-selling-prices">
                   <h4>N{price}</h4>
+                  <h4><span>stock-</span>{amountInStock}</h4>
                 </div>
+                <h4>{occasion}</h4>
                 <div className="top-selling-cta">
                   <button className="add-cart">Add to cart</button>
                 </div>
@@ -243,7 +253,7 @@ const AlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards white-wine-cards">
-          {data5.map(({ id, images, productName, price }) => {
+          {data5.map(({ id, images, productName, price, amountInStock, occasion }) => {
             return (
               <article key={id} className="top-selling-details">
                 <div className="top-selling-image">
@@ -253,7 +263,9 @@ const AlcoholShop = (props) => {
                 <h3>{productName}</h3>
                 <div className="top-selling-prices">
                   <h4>N{price}</h4>
+                  <h4><span>stock-</span>{amountInStock}</h4>
                 </div>
+                <h4>{occasion}</h4>
                 <div className="top-selling-cta">
                   <button className="add-cart">Add to cart</button>
                 </div>
@@ -269,7 +281,7 @@ const AlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards rose-cards">
-          {data6.map(({ id, images, productName, price }) => {
+          {data6.map(({ id, images, productName, price, amountInStock, occasion }) => {
             return (
               <article key={id} className="top-selling-details">
                 <div className="top-selling-image">
@@ -279,7 +291,9 @@ const AlcoholShop = (props) => {
                 <h3>{productName}</h3>
                 <div className="top-selling-prices">
                   <h4>N{price}</h4>
+                  <h4><span>stock-</span>{amountInStock}</h4>
                 </div>
+                <h4>{occasion}</h4>
                 <div className="top-selling-cta">
                   <button className="add-cart">Add to cart</button>
                 </div>

@@ -2,13 +2,14 @@ import React,{useState} from "react";
 import Footer from "../footer/Footer";
 import "./signup.css";
 import { login } from "../../services/auth";
-
+import { useNavigate } from "react-router-dom";
 
 
 
 
 
 const Signup = () => {
+  let navigate = useNavigate()
   const [user, setUser] = useState({
     firstname :'', lastname :'',email: '', password:'', confirmPassword:'',phone: '', address:''
   })
@@ -19,7 +20,7 @@ const Signup = () => {
   }
 
 
-  const createUser = () => {
+  const createUser = async () => {
     console.log(user)
     const payload = {
       name: user?.firstname + ' ' + user?.lastname,
@@ -28,8 +29,17 @@ const Signup = () => {
       confirmPassword: user?.password,
       phoneNumber: user?.phone
     }
-    login(payload)
+    
+    const signup = await login(payload)
+    localStorage.setItem("user", JSON.stringify(signup?.data?.user))
+    localStorage.setItem("token", JSON.stringify(signup?.data?.token));
+    navigate("/")
   }
+
+
+
+
+  
 
 
 
