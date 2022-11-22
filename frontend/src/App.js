@@ -19,6 +19,7 @@ import Detail6 from "./components/detail6/Detail6";
 import Detail7 from "./components/detail7/Detail7";
 import Detail8 from "./components/detail8/Detail8";
 import Success from "./components/success/Success";
+import BillAddress from "./components/billing-address/BillAddress";
 
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -64,6 +65,7 @@ const App = () => {
             element={<Cart cartItems={cartItems} onAdd={onAdd} />}
           />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/billAddress" element={<BillAddress />} />
         </Routes>
       </div>
     </>
