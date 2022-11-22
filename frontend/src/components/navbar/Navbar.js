@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import "./navbar.css";
 import { FaUserAlt } from "react-icons/fa";
@@ -8,9 +8,9 @@ import { AiOutlineClose } from "react-icons/ai";
 import LOGO from "../../assets/logodark.png";
 
 export default function Navbar() {
+  const [user, setuser] = useState(JSON.parse(localStorage.getItem("user")));
   const navRef = useRef();
-const  user = JSON.parse(localStorage.getItem("user"))
-console.log(user.name)
+console.log(user?.name)
 
   const showNavbar = () => {
     navRef.current.classList.toggle("responsive-nav");

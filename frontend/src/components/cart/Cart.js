@@ -1,10 +1,83 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
 import "./cart.css";
 import CART from "../../assets/HENNESSY VSOP 75CL.png";
+import axios from "axios";
 
 const Cart = (props) => {
+  // get Cart Items
+  const token = localStorage.getItem("token");
+  const [cart, setCart] = useState(null);
+  const getCartItems = () => {
+    var config = {
+      method: "get",
+      url: "https://test-applet-5.herokuapp.com/api/v1/carts/cart",
+      headers: {
+        Authorization: "Bearer " + token,
+      },
+    };
+
+    axios(config)
+      .then(function (response) {
+        setCart(response?.data?.cart);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+  const addToCart = async (productId) => {
+    var data = JSON.stringify({
+      productId: productId,
+    });
+
+    var config = {
+      method: "patch",
+      url: "https://test-applet-5.herokuapp.com/api/v1/carts/cart/add",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      data: data,
+    };
+
+    axios(config)
+      .then(function (response) {
+        getCartItems();
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+  const removeFromCart = async (productId) => {
+    var data = JSON.stringify({
+      productId: productId,
+    });
+
+    var config = {
+      method: "patch",
+      url: "https://test-applet-5.herokuapp.com/api/v1/carts/cart/remove",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      data: data,
+    };
+
+    axios(config)
+      .then(function (response) {
+        getCartItems();
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+  useEffect(() => {
+    getCartItems();
+
+    return;
+  }, []);
+
   //fetching cartItems
   const { cartItems } = props;
 
@@ -33,7 +106,7 @@ const Cart = (props) => {
         </div>
 
         <div className="cart-condition">
-          {cartItems.length === 0 && <div>Cart is empty</div>}
+          {cart?.itemCount === 0 && <div>Cart is empty</div>}
 
           <div className="cart-content">
             <div className="cart-content-container">
@@ -46,29 +119,52 @@ const Cart = (props) => {
               </div>
             </div>
 
-            <div className="cart-items">
-              <div className="cart-item">
-                <div className="cart-product">
-                  <img src={CART} alt="" />
-                  <h3 className="item-name item-name-carts">
-                    HENNESSY VSOP 75CL
-                  </h3>
-                </div>
-                <div className="item-price item-price-cart">N50000</div>
-                <div className="item-quantity item-quantity-carts">
-                  <button onClick={handleDecrement}>-</button>
-                  <div className="count">{quantity}</div>
-                  <button onClick={handleIncrement}>+</button>
-                </div>
-                <div className="item-total">N50000</div>
-              </div>
-            </div>
+            {cart?.products?.map(
+              ({ productID, product, quantity, subtotal}) => {
+                return (
+                  <div key={productID} className="cart-items">
+                    <div className="cart-item">
+                      <div className="cart-product">
+                        <img src={product?.images} alt="" />
+                        <h3 className="item-name item-name-carts">
+                          {product?.productName}
+                        </h3>
+                      </div>
+                      <div className="item-price item-price-cart">
+                        {" "}
+                        ₦{product?.price}
+                      </div>
+                      <div className="item-quantity item-quantity-carts">
+                        <button
+                          onClick={(e) => {
+                            e.preventDefault();
+                            removeFromCart(productID);
+                          }}
+                        >
+                          -
+                        </button>
+                        <div className="count">{quantity}</div>
+                        <button
+                          onClick={(e) => {
+                            e.preventDefault();
+                            addToCart(productID);
+                          }}
+                        >
+                          +
+                        </button>
+                      </div>
+                      <div className="item-total"> ₦{subtotal}</div>
+                    </div>
+                  </div>
+                );
+              }
+            )}
             <div className="summary summary-carts">
               <h3>SubTotal</h3>
-              <h4>0</h4>
+              <h4> ₦ {cart?.totalPrice}</h4>
             </div>
             <div className="proceed-checkout-container">
-              <Link to="/signup">
+              <Link to="/checkout">
                 <button className="proceed-checkout">
                   Proceed to checkout
                 </button>

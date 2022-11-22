@@ -30,7 +30,7 @@ const Signin = () => {
     }
     const login = await signin(payload)
     localStorage.setItem("user", JSON.stringify(login?.data?.user))
-    localStorage.setItem("token", JSON.stringify(login?.data?.token));
+    localStorage.setItem("token", login?.token);
     navigate("/")
   }
 
