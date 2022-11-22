@@ -140,8 +140,7 @@ const NonAlcoholShop = (props) => {
                   <div className="top-selling-prices">
                     <h4>₦{price}</h4>
                     <h4>
-                      <span>stock-</span>
-                      {amountInStock}
+                      {amountInStock} <span>- left</span>
                     </h4>
                   </div>
                   <h4>{occasion}</h4>
@@ -181,8 +180,7 @@ const NonAlcoholShop = (props) => {
                   <div className="top-selling-prices">
                     <h4>₦{price}</h4>
                     <h4>
-                      <span>stock-</span>
-                      {amountInStock}
+                      {amountInStock} <span>- left</span>
                     </h4>
                   </div>
                   <h4>{occasion}</h4>
@@ -222,8 +220,7 @@ const NonAlcoholShop = (props) => {
                   <div className="top-selling-prices">
                     <h4>₦{price}</h4>
                     <h4>
-                      <span>stock-</span>
-                      {amountInStock}
+                      {amountInStock} <span>- left</span>
                     </h4>
                   </div>
                   <h4>{occasion}</h4>
@@ -263,8 +260,7 @@ const NonAlcoholShop = (props) => {
                   <div className="top-selling-prices">
                     <h4>₦{price}</h4>
                     <h4>
-                      <span>stock-</span>
-                      {amountInStock}
+                      {amountInStock} <span>- left</span>
                     </h4>
                   </div>
                   <h4>{occasion}</h4>
@@ -304,8 +300,7 @@ const NonAlcoholShop = (props) => {
                   <div className="top-selling-prices">
                     <h4>₦{price}</h4>
                     <h4>
-                      <span>stock-</span>
-                      {amountInStock}
+                      {amountInStock} <span>- left</span>
                     </h4>
                   </div>
                   <h4>{occasion}</h4>
@@ -345,8 +340,7 @@ const NonAlcoholShop = (props) => {
                   <div className="top-selling-prices">
                     <h4>₦{price}</h4>
                     <h4>
-                      <span>stock-</span>
-                      {amountInStock}
+                      {amountInStock} <span>- left</span>
                     </h4>
                   </div>
                   <h4>{occasion}</h4>
@@ -386,8 +380,7 @@ const NonAlcoholShop = (props) => {
                   <div className="top-selling-prices">
                     <h4>₦{price}</h4>
                     <h4>
-                      <span>stock-</span>
-                      {amountInStock}
+                      {amountInStock} <span>- left</span>
                     </h4>
                   </div>
                   <h4>{occasion}</h4>
