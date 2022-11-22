@@ -67,7 +67,7 @@ const Chekout = () => {
           </div>
         </div>
         <div className="proceed-checkout-container">
-          <Link to="/success">
+          <Link to="/payment">
             <button className="proceed-checkout">Checkout</button>
           </Link>
         </div>

@@ -20,6 +20,7 @@ import Detail7 from "./components/detail7/Detail7";
 import Detail8 from "./components/detail8/Detail8";
 import Success from "./components/success/Success";
 import BillAddress from "./components/billing-address/BillAddress";
+import Payment from "./components/payment/Payment";
 
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -66,6 +67,7 @@ const App = () => {
           />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/billAddress" element={<BillAddress />} />
+          <Route path="/payment" element={<Payment />} />
         </Routes>
       </div>
     </>
