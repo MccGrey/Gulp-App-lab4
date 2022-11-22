@@ -9,8 +9,8 @@ const Payment = () => {
           <span>Card number</span>
           <input type="text" maxlength="16" className="card-number-input" />
         </div>
-        <div inputBox>
-          <span>card Holder</span>
+        <div className="inputBox">
+          <span>card holder</span>
           <input type="text" className="card-holder-input" />
         </div>
         <div className="flexbox">
