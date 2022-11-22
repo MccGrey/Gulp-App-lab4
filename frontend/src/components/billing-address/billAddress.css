@@ -1,0 +1,9 @@
+.bill-address {
+  display: flex;
+  flex-direction: column;
+}
+
+.bill-address input {
+  padding: 10px;
+  width: 80%;
+}

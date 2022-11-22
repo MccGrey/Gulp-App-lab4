@@ -1,0 +1,73 @@
+.payment_container {
+  padding-top: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  padding-bottom: 80px;
+}
+.payment_container .card-details {
+  font-family: "oswald", sans-serif;
+  font-size: 2rem;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+.payment_container form {
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 600px;
+}
+
+.payment_container form .inputBox {
+  margin-top: 20px;
+}
+
+.payment_container form .inputBox span {
+  display: block;
+  color: grey;
+  padding-bottom: 5px;
+  font-family: "mulish", sans-serif;
+}
+
+.payment_container form .inputBox input,
+.payment_container form .inputBox select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.payment_container form .flexbox {
+  display: flex;
+  gap: 15px;
+}
+
+.payment_container form .flexbox .inputBox {
+  flex: 1 1 150px;
+}
+
+.payment_container form .flexbox .inputBox select {
+  font-size: 1rem;
+  color: var(--black-color);
+  font-weight: 300;
+}
+
+.payment_container form .submit-btn {
+  width: 100%;
+  background: var(--primary-color);
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  font-family: "oswald", sans-serif;
+  font-size: 20px;
+  color: var(--white-color);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.payment_container form .submit-btn:hover {
+  background: var(--white-color);
+  color: var(--primary-color);
+}

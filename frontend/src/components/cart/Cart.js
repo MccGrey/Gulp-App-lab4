@@ -120,7 +120,7 @@ const Cart = (props) => {
             </div>
 
             {cart?.products?.map(
-              ({ productID, product, quantity, subtotal}) => {
+              ({ productID, product, quantity, subtotal }) => {
                 return (
                   <div key={productID} className="cart-items">
                     <div className="cart-item">
@@ -164,7 +164,7 @@ const Cart = (props) => {
               <h4> ₦ {cart?.totalPrice}</h4>
             </div>
             <div className="proceed-checkout-container">
-              <Link to="/checkout">
+              <Link to="/billAddress">
                 <button className="proceed-checkout">
                   Proceed to checkout
                 </button>
