@@ -17,54 +17,54 @@ const Shop = () => {
       id: 1,
       image: SHOP1,
       title: "HENNESSY VSOP 75CL",
-      price: "N50000",
+      price: "₦39416",
     },
 
     {
       id: 2,
       image: SHOP2,
       title: "MALTA GUINESS 330ML",
-      price: "N50000",
+      price: "₦899",
     },
 
     {
       id: 3,
       image: SHOP3,
       title: "DOMAINE PRE CLOS D’ANJOU",
-      price: "N50000",
+      price: "₦4400",
     },
 
     {
       id: 4,
       image: SHOP4,
-      title: "COCA COLA 50cl (PET)x12",
-      price: "N50000",
+      title: "LIPTON ICE TEA LEMON 450ML",
+      price: "₦200",
     },
 
     {
       id: 4,
       image: SHOP5,
-      title: "COCA COLA 50cl (PET)x12",
-      price: "N50000",
+      title: "B & G CUVEE SPECIALE RED (FRANCE)",
+      price: "₦200",
     },
 
     {
       id: 4,
       image: SHOP6,
-      title: "COCA COLA 50cl (PET)x12",
-      price: "N50000",
+      title: "NESTLE PURE LIFE REGULAR WATER 600ML",
+      price: "₦200",
     },
     {
       id: 4,
       image: SHOP7,
-      title: "COCA COLA 50cl (PET)x12",
-      price: "N50000",
+      title: "Bombay Sapphire 75cl (x12)",
+      price: "₦200",
     },
 
     {
       id: 4,
       image: SHOP8,
-      title: "COCA COLA 50cl (PET)x12",
+      title: "GLENFIDDICH 18YEARS",
       price: "N50000",
     },
   ];
