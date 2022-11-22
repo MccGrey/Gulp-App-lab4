@@ -43,7 +43,7 @@ const Signup = () => {
         <div className="login">
           <h3>Sign-up</h3>
           <h4>
-            Returning customer? <a href="/login">click here</a> to login{" "}
+            Returning customer? <a href="/signin">click here</a> to login{" "}
           </h4>
           <form className="signup">
             <div>

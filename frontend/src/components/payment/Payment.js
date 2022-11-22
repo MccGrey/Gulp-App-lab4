@@ -1,6 +1,7 @@
 import React from "react";
 import "./payment.css";
 import Footer from "../footer/Footer";
+import { Link } from "react-router-dom";
 
 const Payment = () => {
   return (
@@ -61,7 +62,10 @@ const Payment = () => {
               <input type="text" maxlength="4" className="cvv-input" />
             </div>
           </div>
-          <input type="submit" value="submit" className="submit-btn" />
+          <Link to="/success">
+            {" "}
+            <input type="submit" value="submit" className="submit-btn" />
+          </Link>
         </form>
       </div>
       <Footer />
