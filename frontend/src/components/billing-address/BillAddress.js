@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "../footer/Footer";
+import "./billAddress.css";
 
 const BillAddress = () => {
   return (
@@ -8,7 +9,7 @@ const BillAddress = () => {
       <section className="login-container">
         <div className="login">
           <h3>Billing Details</h3>
-          <div>
+          <div className="bill-address">
             <label>address</label>
             <input type="email" name="email" placeholder="enter address" />
             <Link to="/checkout">
