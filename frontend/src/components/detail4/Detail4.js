@@ -40,7 +40,7 @@ const Detail4 = () => {
                   <div className="count">{quantity}</div>
                   <button onClick={handleIncrement}>+</button>
                 </div>
-                <div className="deatil-amount">N50000</div>
+                <div className="deatil-amount">₦50000</div>
               </div>
               <div className="detailed-description">
                 <h4>Description</h4>

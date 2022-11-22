@@ -10,16 +10,13 @@ import IMG8 from "../../assets/NESTLE PURE LIFE REGULAR WATER 600ML.png";
 import "./flashSale.css";
 import { Link } from "react-router-dom";
 
-
-// add to cart functionality needed here for the add to cart button. 
-
+// add to cart functionality needed here for the add to cart button.
 
 // code below for add to cart
 // import React,{useState} from "react";
 // import Footer from "../footer/Footer";
 // import "./flashSale.css";
 // import { addToCart } from "../../services/addToCart";
-
 
 // const AddToCart = () => {
 //   const [user, setUser] = useState({
@@ -31,7 +28,6 @@ import { Link } from "react-router-dom";
 //     setUser((prev) => ({...prev, [name]:value}))
 //   }
 
-
 //   const addToCartUser = () => {
 //     const payload = {
 //       productId: "6360ebe7c8ef955961ca54a5"
@@ -39,18 +35,14 @@ import { Link } from "react-router-dom";
 //     addToCart(payload)
 //   }
 
-
-// This is for add to cart service. 
+// This is for add to cart service.
 // import axios from 'axios';
 // const baseURL = 'https://test-applet-5.herokuapp.com/api/v1/'
 
-
-
 // export const addToCart = async(payload) => {
-    
-//   const response = await axios.patch(`${baseURL}carts/cart/add`, payload);
-//  
 
+//   const response = await axios.patch(`${baseURL}carts/cart/add`, payload);
+//
 
 // export const AddToCart = () => {
 //   const [cart, setCart] = React.useState(null);
@@ -74,18 +66,6 @@ import { Link } from "react-router-dom";
 
 //   if (!post) return "No post!"
 
-
-
-
-
-
-
-
-
-
-
-
-
 //   try {
 //       console.log(response)
 //       return response.data
@@ -94,44 +74,39 @@ import { Link } from "react-router-dom";
 //   }
 // }
 
-
-
-
-
 // the dummy data here is supposed to come from the backend database using fetch or axios
-
 
 const data = [
   {
     id: 1,
     image: IMG1,
     title: "BAILEY IRISH CREAM DELIGHT",
-    oldPrice: "N80000",
-    newPrice: "N50000",
+    oldPrice: "₦80000",
+    newPrice: "₦2384",
     detail: "/product",
   },
   {
     id: 2,
     image: IMG2,
     title: "B & G CUVEE SPECIALE RED",
-    oldPrice: "N80000",
-    newPrice: "N50000",
+    oldPrice: "₦9000",
+    newPrice: "₦4860",
     detail: "/product2",
   },
   {
     id: 3,
     image: IMG3,
     title: "Bombay Sapphire 75cl (x12)",
-    oldPrice: "N80000",
-    newPrice: "N50000",
+    oldPrice: "₦99200",
+    newPrice: "₦89112",
     detail: "/product3",
   },
   {
     id: 4,
     image: IMG4,
     title: "CAMUS VSOP 70CL",
-    oldPrice: "N80000",
-    newPrice: "N50000",
+    oldPrice: "₦70000",
+    newPrice: "₦25265",
     detail: "/product4",
   },
 
@@ -139,8 +114,8 @@ const data = [
     id: 5,
     image: IMG5,
     title: "CHIVITA APPLLE JUICE 100CL",
-    oldPrice: "N80000",
-    newPrice: "N50000",
+    oldPrice: "₦900",
+    newPrice: "₦700",
     detail: "/product5",
   },
 
@@ -148,8 +123,8 @@ const data = [
     id: 6,
     image: IMG6,
     title: "REDBULL COFFE CANNED DRINK",
-    oldPrice: "N80000",
-    newPrice: "N50000",
+    oldPrice: "₦1000",
+    newPrice: "₦899",
     detail: "/product6",
   },
 
@@ -157,8 +132,8 @@ const data = [
     id: 7,
     image: IMG7,
     title: "LIPTON ICE TEA LEMON 450ML",
-    oldPrice: "N80000",
-    newPrice: "N50000",
+    oldPrice: "₦3000",
+    newPrice: "₦149",
     detail: "/product7",
   },
 
@@ -166,8 +141,8 @@ const data = [
     id: 8,
     image: IMG8,
     title: "NESTLE PURE LIFE REGULAR",
-    oldPrice: "N80000",
-    newPrice: "N50000",
+    oldPrice: "₦500",
+    newPrice: "₦200",
     detail: "/product8",
   },
 ];

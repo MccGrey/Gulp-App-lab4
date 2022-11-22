@@ -11,28 +11,28 @@ const TopSelling = () => {
       id: 1,
       image: TOP1,
       title: "HENNESSY VSOP 75CL",
-      price: "N50000",
+      price: "₦39416",
     },
 
     {
       id: 2,
       image: TOP2,
       title: "MALTA GUINESS 330ML",
-      price: "N50000",
+      price: "₦229",
     },
 
     {
       id: 3,
       image: TOP3,
       title: "DOMAINE PRE CLOS ROSE (FRANCE)",
-      price: "N50000",
+      price: "₦4400",
     },
 
     {
       id: 4,
       image: TOP4,
       title: "COCA COLA 50cl (PET)x12",
-      price: "N50000",
+      price: "₦200",
     },
   ];
 
