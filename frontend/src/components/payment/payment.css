@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   flex-flow: column;
-  padding-bottom: 60px;
+  padding-bottom: 80px;
 }
 .payment_container .card-details {
   font-family: "oswald", sans-serif;
