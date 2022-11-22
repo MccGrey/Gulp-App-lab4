@@ -13,7 +13,7 @@ const BillAddress = () => {
             <label>address</label>
             <input type="email" name="email" placeholder="enter address" />
             <Link to="/checkout">
-              <button>Proceed to checkout</button>
+              <button className="billing-btn">Proceed to checkout</button>
             </Link>
           </div>
         </div>
