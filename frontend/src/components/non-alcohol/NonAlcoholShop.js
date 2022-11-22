@@ -142,7 +142,7 @@ axios(config)
 
                   <h3>{productName}</h3>
                   <div className="top-selling-prices">
-                    <h4>N{price}</h4>
+                    <h4>₦{price}</h4>
                     <h4>
                       <span>stock-</span>
                       {amountInStock}
@@ -183,7 +183,7 @@ axios(config)
 
                   <h3>{productName}</h3>
                   <div className="top-selling-prices">
-                    <h4>N{price}</h4>
+                    <h4>₦{price}</h4>
                     <h4>
                       <span>stock-</span>
                       {amountInStock}
@@ -224,7 +224,7 @@ axios(config)
 
                   <h3>{productName}</h3>
                   <div className="top-selling-prices">
-                    <h4>N{price}</h4>
+                    <h4>₦{price}</h4>
                     <h4>
                       <span>stock-</span>
                       {amountInStock}
@@ -265,7 +265,7 @@ axios(config)
 
                   <h3>{productName}</h3>
                   <div className="top-selling-prices">
-                    <h4>N{price}</h4>
+                    <h4>₦{price}</h4>
                     <h4>
                       <span>stock-</span>
                       {amountInStock}
@@ -306,7 +306,7 @@ axios(config)
 
                   <h3>{productName}</h3>
                   <div className="top-selling-prices">
-                    <h4>N{price}</h4>
+                    <h4>₦{price}</h4>
                     <h4>
                       <span>stock-</span>
                       {amountInStock}
@@ -347,7 +347,7 @@ axios(config)
 
                   <h3>{productName}</h3>
                   <div className="top-selling-prices">
-                    <h4>N{price}</h4>
+                    <h4>₦{price}</h4>
                     <h4>
                       <span>stock-</span>
                       {amountInStock}
@@ -388,7 +388,7 @@ axios(config)
 
                   <h3>{productName}</h3>
                   <div className="top-selling-prices">
-                    <h4>N{price}</h4>
+                    <h4>₦{price}</h4>
                     <h4>
                       <span>stock-</span>
                       {amountInStock}

@@ -33,6 +33,7 @@ import Footer from "../footer/Footer";
 
 
 const AlcoholShop = (props) => {
+  const token = localStorage.getItem("token");
   const [wineRose, setWineRose] = useState([]);
   const [wineWhite, setWineWhite] = useState([]);
   const [wineRed, setWineRed] = useState([]);
@@ -91,6 +92,33 @@ const AlcoholShop = (props) => {
     getCategoryProduct("Alcoholic", "Gin");
   }, []);
 
+
+  const addToCart = async (productId) => {
+
+    var data = JSON.stringify({
+      productId: productId,
+    });
+  
+  var config = {
+    method: "patch",
+    url: "https://test-applet-5.herokuapp.com/api/v1/carts/cart/add",
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+    },
+    data: data,
+  };
+  
+  axios(config)
+  .then(function (response) {
+    alert("product added to cart")
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+  }
+  
+
   const data1 = wineWhite;
   const data2 = wineRed;
 
@@ -101,7 +129,7 @@ const AlcoholShop = (props) => {
   const data5 = cream;
 
   const data6 = gin;
-  const { onAdd } = props;
+  const {  } = props;
     return (
     <div className="alcohol-container-main">
       <Button />
@@ -111,21 +139,30 @@ const AlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards gin-cards">
-          {wineRose?.map(({ id, images, productName, price, amountInStock, occasion }) => {
+          {wineRose?.map(({ _id, images, productName, price, amountInStock, occasion }) => {
             return (
-              <article key={id} className="top-selling-details">
+              <article key={_id} className="top-selling-details">
                 <div className="top-selling-image">
                 <img src={images} alt={productName} />
                 </div>
 
                 <h3>{productName}</h3>
                 <div className="top-selling-prices">
-                  <h4>N{price}</h4>
-                  <h4><span>stock-</span>{amountInStock}</h4>
+                  <h4>₦{price}</h4>
+                  <h4>
+                      <span>stock-</span>
+                      {amountInStock}
+                    </h4>
                 </div>
                 <h4>{occasion}</h4>
                 <div className="top-selling-cta">
-                <button className="add-cart" onClick={onAdd}>
+                <button
+                      className="add-cart"
+                      onClick={(e) => {
+                        e.preventDefault()
+                        addToCart(_id);
+                      }}
+                    >
                   Add to cart
                   </button>
                 </div>
@@ -141,25 +178,37 @@ const AlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards cream-cards">
-          {data1.map(({ id, images, productName, price, amountInStock, occasion }) => {
+          {data1.map(({ _id, images, productName, price, amountInStock, occasion }) => {
             return (
-              <article key={id} className="top-selling-details">
+              <article key={_id} className="top-selling-details">
                 <div className="top-selling-image">
                   <img src={images} alt={productName} data={data1} />
                 </div>
 
                 <h3>{productName}</h3>
                 <div className="top-selling-prices">
-                  <h4>N{price}</h4>
-                  <h4><span>stock-</span>{amountInStock}</h4>
+                  <h4>₦{price}</h4>
+                  <h4>
+                      <span>stock-</span>
+                      {amountInStock}
+                    </h4>
                 </div>
                 <h4>{occasion}</h4>
                 <div className="top-selling-cta">
-                  <button className="add-cart">Add to cart</button>
-                </div>
-              </article>
-            );
-          })}
+                    <button
+                      className="add-cart"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        addToCart(_id);
+                      }}
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </article>
+              );
+            }
+          )}
         </div>
       </section>
 
@@ -169,21 +218,32 @@ const AlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards whiskey-cards">
-          {data2.map(({ id, images, productName, price, amountInStock, occasion }) => {
+          {data2.map(({ _id, images, productName, price, amountInStock, occasion }) => {
             return (
-              <article key={id} className="top-selling-details">
+              <article key={_id} className="top-selling-details">
                 <div className="top-selling-image">
                   <img src={images} alt={productName} data={data2} />
                 </div>
 
                 <h3>{productName}</h3>
                 <div className="top-selling-prices">
-                  <h4>N{price}</h4>
-                  <h4><span>stock-</span>{amountInStock}</h4>
+                  <h4>₦{price}</h4>
+                  <h4>
+                      <span>stock-</span>
+                      {amountInStock}
+                    </h4>
                 </div>
                 <h4>{occasion}</h4>
                 <div className="top-selling-cta">
-                  <button className="add-cart">Add to cart</button>
+                <button
+                      className="add-cart"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        addToCart(_id);
+                      }}
+                    >
+                      Add to cart
+                    </button>
                 </div>
               </article>
             );
@@ -197,21 +257,33 @@ const AlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards cognac-cards">
-          {data3.map(({ id, images, productName, price, amountInStock, occasion }) => {
+          {data3.map(
+            ({ _id, images, productName, price, amountInStock, occasion }) => {
             return (
-              <article key={id} className="top-selling-details ">
+              <article key={_id} className="top-selling-details ">
                 <div className="top-selling-image">
                   <img src={images} alt={productName} data={data3} />
                 </div>
 
                 <h3>{productName}</h3>
                 <div className="top-selling-prices">
-                  <h4>N{price}</h4>
-                  <h4><span>stock-</span>{amountInStock}</h4>
+                  <h4>₦{price}</h4>
+                  <h4>
+                      <span>stock-</span>
+                      {amountInStock}
+                    </h4>
                 </div>
                 <h4>{occasion}</h4>
                 <div className="top-selling-cta">
-                  <button className="add-cart">Add to cart</button>
+                <button
+                      className="add-cart"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        addToCart(_id);
+                      }}
+                    >
+                      Add to cart
+                    </button>
                 </div>
               </article>
             );
@@ -225,21 +297,32 @@ const AlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards red-wine-cards">
-          {data4.map(({ id, images, productName, price, amountInStock, occasion }) => {
+          {data4.map(({ _id, images, productName, price, amountInStock, occasion }) => {
             return (
-              <article key={id} className="top-selling-details">
+              <article key={_id} className="top-selling-details">
                 <div className="top-selling-image">
                   <img src={images} alt={productName} />
                 </div>
 
                 <h3>{productName}</h3>
                 <div className="top-selling-prices">
-                  <h4>N{price}</h4>
-                  <h4><span>stock-</span>{amountInStock}</h4>
+                  <h4>₦{price}</h4>
+                  <h4>
+                      <span>stock-</span>
+                      {amountInStock}
+                    </h4>
                 </div>
                 <h4>{occasion}</h4>
                 <div className="top-selling-cta">
-                  <button className="add-cart">Add to cart</button>
+                <button
+                      className="add-cart"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        addToCart(_id);
+                      }}
+                    >
+                      Add to cart
+                    </button>
                 </div>
               </article>
             );
@@ -253,21 +336,32 @@ const AlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards white-wine-cards">
-          {data5.map(({ id, images, productName, price, amountInStock, occasion }) => {
+          {data5.map(({ _id, images, productName, price, amountInStock, occasion }) => {
             return (
-              <article key={id} className="top-selling-details">
+              <article key={_id} className="top-selling-details">
                 <div className="top-selling-image">
                   <img src={images} alt={productName} data={data5} />
                 </div>
 
                 <h3>{productName}</h3>
                 <div className="top-selling-prices">
-                  <h4>N{price}</h4>
-                  <h4><span>stock-</span>{amountInStock}</h4>
+                  <h4>₦{price}</h4>
+                  <h4>
+                      <span>stock-</span>
+                      {amountInStock}
+                    </h4>
                 </div>
                 <h4>{occasion}</h4>
                 <div className="top-selling-cta">
-                  <button className="add-cart">Add to cart</button>
+                <button
+                      className="add-cart"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        addToCart(_id);
+                      }}
+                    >
+                      Add to cart
+                    </button>
                 </div>
               </article>
             );
@@ -281,21 +375,32 @@ const AlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards rose-cards">
-          {data6.map(({ id, images, productName, price, amountInStock, occasion }) => {
+          {data6.map(({ _id, images, productName, price, amountInStock, occasion }) => {
             return (
-              <article key={id} className="top-selling-details">
+              <article key={_id} className="top-selling-details">
                 <div className="top-selling-image">
                   <img src={images} alt={productName} data={data6} />
                 </div>
 
                 <h3>{productName}</h3>
                 <div className="top-selling-prices">
-                  <h4>N{price}</h4>
-                  <h4><span>stock-</span>{amountInStock}</h4>
+                  <h4>₦{price}</h4>
+                  <h4>
+                      <span>stock-</span>
+                      {amountInStock}
+                    </h4>
                 </div>
                 <h4>{occasion}</h4>
                 <div className="top-selling-cta">
-                  <button className="add-cart">Add to cart</button>
+                <button
+                      className="add-cart"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        addToCart(_id);
+                      }}
+                    >
+                      Add to cart
+                    </button>
                 </div>
               </article>
             );
