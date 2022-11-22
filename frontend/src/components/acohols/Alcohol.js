@@ -126,7 +126,7 @@ const AlcoholShop = (props) => {
   return (
     <div className="alcohol-container-main">
       <Button />
-      <section className="top-selling gin" id="wine-rose">
+      <section className="top-selling gin" id="rose">
         <div className="heading">
           <h3>WINEROSE</h3>
         </div>
