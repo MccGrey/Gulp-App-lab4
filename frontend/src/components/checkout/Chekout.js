@@ -32,24 +32,148 @@ const Chekout = () => {
                 </div>
 
                 <div className="item-quantity">
-                  <div className="count">0</div>
+                  <div className="count">1</div>
                 </div>
-                <div className="item-total">N50000</div>
+                <div className="item-total">₦39416</div>
+              </div>
+
+              <div className="cart-item">
+                <div className="cart-product">
+                  <h3 className="item-name item-name-checkout">B & G CUVEE</h3>
+                </div>
+
+                <div className="item-quantity">
+                  <div className="count">1</div>
+                </div>
+                <div className="item-total">₦4860</div>
+              </div>
+
+              <div className="cart-item">
+                <div className="cart-product">
+                  <h3 className="item-name item-name-checkout">Domaine Rose</h3>
+                </div>
+
+                <div className="item-quantity">
+                  <div className="count">1</div>
+                </div>
+                <div className="item-total">₦4400</div>
+              </div>
+
+              <div className="cart-item">
+                <div className="cart-product">
+                  <h3 className="item-name item-name-checkout">
+                    Baileys Cream 75CL
+                  </h3>
+                </div>
+
+                <div className="item-quantity">
+                  <div className="count">1</div>
+                </div>
+                <div className="item-total">₦2384</div>
+              </div>
+
+              <div className="cart-item">
+                <div className="cart-product">
+                  <h3 className="item-name item-name-checkout">
+                    Chivita Apple 100CL
+                  </h3>
+                </div>
+
+                <div className="item-quantity">
+                  <div className="count">2</div>
+                </div>
+                <div className="item-total">₦1400</div>
+              </div>
+
+              <div className="cart-item">
+                <div className="cart-product">
+                  <h3 className="item-name item-name-checkout">
+                    CocaCola PET 50CL
+                  </h3>
+                </div>
+
+                <div className="item-quantity">
+                  <div className="count">2</div>
+                </div>
+                <div className="item-total">₦400</div>
+              </div>
+
+              <div className="cart-item">
+                <div className="cart-product">
+                  <h3 className="item-name item-name-checkout">
+                    Nestle water 600ML
+                  </h3>
+                </div>
+
+                <div className="item-quantity">
+                  <div className="count">5</div>
+                </div>
+                <div className="item-total">₦1000</div>
+              </div>
+
+              <div className="cart-item">
+                <div className="cart-product">
+                  <h3 className="item-name item-name-checkout">
+                    Malta Guiness
+                  </h3>
+                </div>
+
+                <div className="item-quantity">
+                  <div className="count">2</div>
+                </div>
+                <div className="item-total">₦1798</div>
+              </div>
+
+              <div className="cart-item">
+                <div className="cart-product">
+                  <h3 className="item-name item-name-checkout">
+                    Amstel Malt 330ML
+                  </h3>
+                </div>
+
+                <div className="item-quantity">
+                  <div className="count">2</div>
+                </div>
+                <div className="item-total">₦518</div>
+              </div>
+
+              <div className="cart-item">
+                <div className="cart-product">
+                  <h3 className="item-name item-name-checkout">
+                    Lipton ice tea
+                  </h3>
+                </div>
+
+                <div className="item-quantity">
+                  <div className="count">2</div>
+                </div>
+                <div className="item-total">₦298</div>
+              </div>
+
+              <div className="cart-item">
+                <div className="cart-product">
+                  <h3 className="item-name item-name-checkout">Eva Wine</h3>
+                </div>
+
+                <div className="item-quantity">
+                  <div className="count">2</div>
+                </div>
+                <div className="item-total">₦3898</div>
               </div>
             </div>
           </div>
         </div>
         <div className="summary-checkout">
           <h3>SubTotal</h3>
-          <h4>N50000</h4>
+          <h4>₦60372</h4>
         </div>
         <div className="summary-checkout">
           <h3>Shipping</h3>
-          <h4>N10000</h4>
+          <h4>₦1000</h4>
         </div>
         <div className="summary-checkout">
           <h3>Total</h3>
-          <h4>N60000</h4>
+          <h4>₦70372</h4>
         </div>
         <div>
           <input type="radio" />
