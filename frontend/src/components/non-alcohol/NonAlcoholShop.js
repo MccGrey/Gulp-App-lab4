@@ -29,7 +29,7 @@ import Button from "../../components/buttons/Button";
 import Footer from "../footer/Footer";
 
 const NonAlcoholShop = (props) => {
-    const token = localStorage.getItem("token");
+  const token = localStorage.getItem("token");
   const [juice, setJuice] = useState([]);
   const [softDrinks, setSoftDrinks] = useState([]);
   const [water, setWater] = useState([]);
@@ -38,7 +38,6 @@ const NonAlcoholShop = (props) => {
   const [iceTea, setIceTea] = useState([]);
   const [nonAlcoholicWine, setNonAlcoholicWine] = useState([]);
 
-  
   const getCategoryProduct = async (category, subcategory) => {
     var config = {
       method: "get",
@@ -50,10 +49,8 @@ const NonAlcoholShop = (props) => {
 
     axios(config)
       .then(function (response) {
-       
         if (subcategory === "Juice") {
           setJuice(response?.data?.productListing);
-          
         }
         if (subcategory === "Soft Drink") {
           setSoftDrinks(response?.data?.productListing);
@@ -88,30 +85,29 @@ const NonAlcoholShop = (props) => {
     getCategoryProduct("Non-Alcoholic", "Non-Alcoholic Wine");
   }, []);
 
-const addToCart = async (productId) => {
+  const addToCart = async (productId) => {
+    var data = JSON.stringify({
+      productId: productId,
+    });
 
-  var data = JSON.stringify({
-    productId: productId,
-  });
+    var config = {
+      method: "patch",
+      url: "https://test-applet-5.herokuapp.com/api/v1/carts/cart/add",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      data: data,
+    };
 
-var config = {
-  method: "patch",
-  url: "https://test-applet-5.herokuapp.com/api/v1/carts/cart/add",
-  headers: {
-    Authorization: `Bearer ${token}`,
-    "Content-Type": "application/json",
-  },
-  data: data,
-};
-
-axios(config)
-.then(function (response) {
-  alert("product added to cart")
-})
-.catch(function (error) {
-  console.log(error);
-});
-}
+    axios(config)
+      .then(function (response) {
+        alert("product added to cart");
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
 
   const data1 = softDrinks;
   const data2 = water;
@@ -123,7 +119,7 @@ axios(config)
   const data5 = iceTea;
 
   const data6 = nonAlcoholicWine;
-  const {  } = props;
+  const {} = props;
   return (
     <div className="main">
       <section className="top-selling gin" id="juice">
@@ -153,7 +149,7 @@ axios(config)
                     <button
                       className="add-cart"
                       onClick={(e) => {
-                        e.preventDefault()
+                        e.preventDefault();
                         addToCart(_id);
                       }}
                     >
@@ -412,7 +408,6 @@ axios(config)
           )}
         </div>
       </section>
-      <Footer />
     </div>
   );
 };
