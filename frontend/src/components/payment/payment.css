@@ -6,7 +6,12 @@
   flex-flow: column;
   padding-bottom: 60px;
 }
-
+.payment_container .card-details {
+  font-family: "oswald", sans-serif;
+  font-size: 2rem;
+  color: var(--primary-color);
+  font-weight: 500;
+}
 .payment_container form {
   background: white;
   border-radius: 4px;
@@ -23,6 +28,7 @@
   display: block;
   color: grey;
   padding-bottom: 5px;
+  font-family: "mulish", sans-serif;
 }
 
 .payment_container form .inputBox input,
@@ -31,6 +37,7 @@
   padding: 10px;
   border-radius: 6px;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
 }
 
 .payment_container form .flexbox {
@@ -46,4 +53,21 @@
   font-size: 1rem;
   color: var(--black-color);
   font-weight: 300;
+}
+
+.payment_container form .submit-btn {
+  width: 100%;
+  background: var(--primary-color);
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  font-family: "oswald", sans-serif;
+  font-size: 20px;
+  color: var(--white-color);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.payment_container form .submit-btn:hover {
+  background: var(--white-color);
+  color: var(--primary-color);
 }

@@ -4,6 +4,7 @@ import "./payment.css";
 const Payment = () => {
   return (
     <div className="payment_container">
+      <h4 className="card-details">Card details</h4>
       <form action="">
         <div className="inputBox">
           <span>Card number</span>
