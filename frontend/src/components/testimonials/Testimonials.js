@@ -3,6 +3,9 @@ import "./testimonials.css";
 import TEST1 from "../../assets/gulp pt man 1.png";
 import TEST2 from "../../assets/gulp pt wom 1.png";
 import TEST3 from "../../assets/Gulp Ptrait one 1.png";
+import TEST4 from "../../assets/Skull.jpg";
+import TEST5 from "../../assets/TravisScott.png";
+import TEST6 from "../../assets/MccGrey.png";
 import { RiDoubleQuotesL } from "react-icons/ri";
 import { IoMdStar } from "react-icons/io";
 
@@ -17,9 +20,9 @@ import { Pagination } from "swiper";
 const Testimonials = () => {
   const data = [
     {
-      avatr: TEST3,
-      pname: "Angela Koya",
-      review: "Gulp always leaves me in awe with their swift delivery service",
+      avatr: TEST4,
+      pname: "Skull Key",
+      review: "I cant count how many of my friends I showed this site to.",
     },
 
     {
@@ -29,25 +32,25 @@ const Testimonials = () => {
     },
 
     {
+      avatr: TEST3,
+      pname: "Angela Koya",
+      review: "Gulp always leaves me in awe with their swift delivery service",
+    },
+
+    {
       avatr: TEST2,
       pname: "Sandra Kent",
       review: "I cant count how many of my friends I showed this site to.",
     },
 
     {
-      avatr: TEST2,
+      avatr: TEST6,
       pname: "MccGrey Saint",
       review: "I cant count how many of my friends I showed this site to.",
     },
 
     {
-      avatr: TEST2,
-      pname: "Skull Key",
-      review: "I cant count how many of my friends I showed this site to.",
-    },
-
-    {
-      avatr: TEST2,
+      avatr: TEST5,
       pname: "Travis Scott",
       review: "I cant count how many of my friends I showed this site to.",
     },
