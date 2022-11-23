@@ -33,6 +33,24 @@ const Testimonials = () => {
       pname: "Sandra Kent",
       review: "I cant count how many of my friends I showed this site to.",
     },
+
+    {
+      avatr: TEST2,
+      pname: "MccGrey Saint",
+      review: "I cant count how many of my friends I showed this site to.",
+    },
+
+    {
+      avatr: TEST2,
+      pname: "Skull Key",
+      review: "I cant count how many of my friends I showed this site to.",
+    },
+
+    {
+      avatr: TEST2,
+      pname: "Travis Scott",
+      review: "I cant count how many of my friends I showed this site to.",
+    },
   ];
   return (
     <section className="testimonials">
