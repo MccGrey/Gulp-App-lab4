@@ -10,6 +10,97 @@ import IMG8 from "../../assets/NESTLE PURE LIFE REGULAR WATER 600ML.png";
 import "./flashSale.css";
 import { Link } from "react-router-dom";
 
+
+// add to cart functionality needed here for the add to cart button. 
+
+
+// code below for add to cart
+// import React,{useState} from "react";
+// import Footer from "../footer/Footer";
+// import "./flashSale.css";
+// import { addToCart } from "../../services/addToCart";
+
+
+// const AddToCart = () => {
+//   const [user, setUser] = useState({
+//     productId: "6360ebe7c8ef955961ca54a5"
+//   })
+
+//   const handleChange = (e)=> {
+//     const {name, value} = e.target;
+//     setUser((prev) => ({...prev, [name]:value}))
+//   }
+
+
+//   const addToCartUser = () => {
+//     const payload = {
+//       productId: "6360ebe7c8ef955961ca54a5"
+//     }
+//     addToCart(payload)
+//   }
+
+
+// This is for add to cart service. 
+// import axios from 'axios';
+// const baseURL = 'https://test-applet-5.herokuapp.com/api/v1/'
+
+
+
+// export const addToCart = async(payload) => {
+    
+//   const response = await axios.patch(`${baseURL}carts/cart/add`, payload);
+//  
+
+
+// export const AddToCart = () => {
+//   const [cart, setCart] = React.useState(null);
+
+//   React.useEffect(() => {
+//     axios.get(`${baseURL}/1`).then((response) => {
+//       setPost(response.data);
+//     });
+//   }, []);
+
+//   function updateCart() {
+//     axios
+//       .put(`${baseURL}/1`, {
+//         title: "Hello World!",
+//         body: "This is an updated post."
+//       })
+//       .then((response) => {
+//         setPost(response.data);
+//       });
+//   }
+
+//   if (!post) return "No post!"
+
+
+
+
+
+
+
+
+
+
+
+
+
+//   try {
+//       console.log(response)
+//       return response.data
+//   } catch (error) {
+//       return error
+//   }
+// }
+
+
+
+
+
+// the dummy data here is supposed to come from the backend database using fetch or axios
+
+
 const data = [
   {
     id: 1,
