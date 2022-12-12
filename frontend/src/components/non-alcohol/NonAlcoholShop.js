@@ -25,8 +25,11 @@ import NONALCWINE2 from "../../assets/EVA SPARKLING RED GRAPE DRINK 750ML.png";
 import NONALCWINE3 from "../../assets/EVA SPARKLING RED GRAPE DRINK 750ML.png";
 import NONALCWINE4 from "../../assets/EVA SPARKLING RED GRAPE DRINK 750ML.png";
 import "./nonAlcoholShop.css";
+import Button from "../../components/buttons/Button";
+import Footer from "../footer/Footer";
 
 const NonAlcoholShop = (props) => {
+  const token = localStorage.getItem("token");
   const [juice, setJuice] = useState([]);
   const [softDrinks, setSoftDrinks] = useState([]);
   const [water, setWater] = useState([]);
@@ -35,7 +38,6 @@ const NonAlcoholShop = (props) => {
   const [iceTea, setIceTea] = useState([]);
   const [nonAlcoholicWine, setNonAlcoholicWine] = useState([]);
 
-  // console.log([juice])
   const getCategoryProduct = async (category, subcategory) => {
     var config = {
       method: "get",
@@ -47,10 +49,8 @@ const NonAlcoholShop = (props) => {
 
     axios(config)
       .then(function (response) {
-        console.log(subcategory);
         if (subcategory === "Juice") {
           setJuice(response?.data?.productListing);
-          //  console.log(response.data);
         }
         if (subcategory === "Soft Drink") {
           setSoftDrinks(response?.data?.productListing);
@@ -85,6 +85,30 @@ const NonAlcoholShop = (props) => {
     getCategoryProduct("Non-Alcoholic", "Non-Alcoholic Wine");
   }, []);
 
+  const addToCart = async (productId) => {
+    var data = JSON.stringify({
+      productId: productId,
+    });
+
+    var config = {
+      method: "patch",
+      url: "https://test-applet-5.herokuapp.com/api/v1/carts/cart/add",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      data: data,
+    };
+
+    axios(config)
+      .then(function (response) {
+        alert("product added to cart");
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+
   const data1 = softDrinks;
   const data2 = water;
 
@@ -95,7 +119,7 @@ const NonAlcoholShop = (props) => {
   const data5 = iceTea;
 
   const data6 = nonAlcoholicWine;
-  const { onAdd } = props;
+  const {} = props;
   return (
     <div className="main">
       <section className="top-selling gin" id="juice">
@@ -104,25 +128,37 @@ const NonAlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards gin-cards">
-          {juice?.map(({ id, images, productName, price }) => {
-            return (
-              <article key={id} className="top-selling-details">
-                <div className="top-selling-image">
-                  <img src={images} alt={productName} />
-                </div>
+          {juice?.map(
+            ({ _id, images, productName, price, amountInStock, occasion }) => {
+              return (
+                <article key={_id} className="top-selling-details">
+                  <div className="top-selling-image">
+                    <img src={images} alt={productName} />
+                  </div>
 
-                <h3>{productName}</h3>
-                <div className="top-selling-prices">
-                  <h4>{price}</h4>
-                </div>
-                <div className="top-selling-cta">
-                  <button className="add-cart" onClick={onAdd}>
-                    Add to cart
-                  </button>
-                </div>
-              </article>
-            );
-          })}
+                  <h3>{productName}</h3>
+                  <div className="top-selling-prices">
+                    <h4>₦{price}</h4>
+                    <h4>
+                      {amountInStock} <span>- left</span>
+                    </h4>
+                  </div>
+                  <h4>{occasion}</h4>
+                  <div className="top-selling-cta">
+                    <button
+                      className="add-cart"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        addToCart(_id);
+                      }}
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </article>
+              );
+            }
+          )}
         </div>
       </section>
 
@@ -132,23 +168,37 @@ const NonAlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards cream-cards">
-          {data1.map(({ id, images, productName, price }) => {
-            return (
-              <article key={id} className="top-selling-details">
-                <div className="top-selling-image">
-                  <img src={images} alt={productName} data={data1} />
-                </div>
+          {data1.map(
+            ({ _id, images, productName, price, amountInStock, occasion }) => {
+              return (
+                <article key={_id} className="top-selling-details">
+                  <div className="top-selling-image">
+                    <img src={images} alt={productName} data={data1} />
+                  </div>
 
-                <h3>{productName}</h3>
-                <div className="top-selling-prices">
-                  <h4>{price}</h4>
-                </div>
-                <div className="top-selling-cta">
-                  <button className="add-cart">Add to cart</button>
-                </div>
-              </article>
-            );
-          })}
+                  <h3>{productName}</h3>
+                  <div className="top-selling-prices">
+                    <h4>₦{price}</h4>
+                    <h4>
+                      {amountInStock} <span>- left</span>
+                    </h4>
+                  </div>
+                  <h4>{occasion}</h4>
+                  <div className="top-selling-cta">
+                    <button
+                      className="add-cart"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        addToCart(_id);
+                      }}
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </article>
+              );
+            }
+          )}
         </div>
       </section>
 
@@ -158,23 +208,37 @@ const NonAlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards whiskey-cards">
-          {data2.map(({ id, images, productName, price }) => {
-            return (
-              <article key={id} className="top-selling-details">
-                <div className="top-selling-image">
-                  <img src={images} alt={productName} data={data2} />
-                </div>
+          {data2.map(
+            ({ _id, images, productName, price, amountInStock, occasion }) => {
+              return (
+                <article key={_id} className="top-selling-details">
+                  <div className="top-selling-image">
+                    <img src={images} alt={productName} data={data2} />
+                  </div>
 
-                <h3>{productName}</h3>
-                <div className="top-selling-prices">
-                  <h4>{price}</h4>
-                </div>
-                <div className="top-selling-cta">
-                  <button className="add-cart">Add to cart</button>
-                </div>
-              </article>
-            );
-          })}
+                  <h3>{productName}</h3>
+                  <div className="top-selling-prices">
+                    <h4>₦{price}</h4>
+                    <h4>
+                      {amountInStock} <span>- left</span>
+                    </h4>
+                  </div>
+                  <h4>{occasion}</h4>
+                  <div className="top-selling-cta">
+                    <button
+                      className="add-cart"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        addToCart(_id);
+                      }}
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </article>
+              );
+            }
+          )}
         </div>
       </section>
 
@@ -184,23 +248,37 @@ const NonAlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards cognac-cards">
-          {data3.map(({ id, images, productName, price }) => {
-            return (
-              <article key={id} className="top-selling-details ">
-                <div className="top-selling-image">
-                  <img src={images} alt={productName} data={data3} />
-                </div>
+          {data3.map(
+            ({ _id, images, productName, price, amountInStock, occasion }) => {
+              return (
+                <article key={_id} className="top-selling-details ">
+                  <div className="top-selling-image">
+                    <img src={images} alt={productName} data={data3} />
+                  </div>
 
-                <h3>{productName}</h3>
-                <div className="top-selling-prices">
-                  <h4>{price}</h4>
-                </div>
-                <div className="top-selling-cta">
-                  <button className="add-cart">Add to cart</button>
-                </div>
-              </article>
-            );
-          })}
+                  <h3>{productName}</h3>
+                  <div className="top-selling-prices">
+                    <h4>₦{price}</h4>
+                    <h4>
+                      {amountInStock} <span>- left</span>
+                    </h4>
+                  </div>
+                  <h4>{occasion}</h4>
+                  <div className="top-selling-cta">
+                    <button
+                      className="add-cart"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        addToCart(_id);
+                      }}
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </article>
+              );
+            }
+          )}
         </div>
       </section>
 
@@ -210,23 +288,37 @@ const NonAlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards red-wine-cards">
-          {data4.map(({ id, images, productName, price }) => {
-            return (
-              <article key={id} className="top-selling-details">
-                <div className="top-selling-image">
-                  <img src={images} alt={productName} />
-                </div>
+          {data4.map(
+            ({ _id, images, productName, price, amountInStock, occasion }) => {
+              return (
+                <article key={_id} className="top-selling-details">
+                  <div className="top-selling-image">
+                    <img src={images} alt={productName} />
+                  </div>
 
-                <h3>{productName}</h3>
-                <div className="top-selling-prices">
-                  <h4>{price}</h4>
-                </div>
-                <div className="top-selling-cta">
-                  <button className="add-cart">Add to cart</button>
-                </div>
-              </article>
-            );
-          })}
+                  <h3>{productName}</h3>
+                  <div className="top-selling-prices">
+                    <h4>₦{price}</h4>
+                    <h4>
+                      {amountInStock} <span>- left</span>
+                    </h4>
+                  </div>
+                  <h4>{occasion}</h4>
+                  <div className="top-selling-cta">
+                    <button
+                      className="add-cart"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        addToCart(_id);
+                      }}
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </article>
+              );
+            }
+          )}
         </div>
       </section>
 
@@ -236,23 +328,37 @@ const NonAlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards white-wine-cards">
-          {data5.map(({ id, images, productName, price }) => {
-            return (
-              <article key={id} className="top-selling-details">
-                <div className="top-selling-image">
-                  <img src={images} alt={productName} data={data5} />
-                </div>
+          {data5.map(
+            ({ _id, images, productName, price, amountInStock, occasion }) => {
+              return (
+                <article key={_id} className="top-selling-details">
+                  <div className="top-selling-image">
+                    <img src={images} alt={productName} data={data5} />
+                  </div>
 
-                <h3>{productName}</h3>
-                <div className="top-selling-prices">
-                  <h4>{price}</h4>
-                </div>
-                <div className="top-selling-cta">
-                  <button className="add-cart">Add to cart</button>
-                </div>
-              </article>
-            );
-          })}
+                  <h3>{productName}</h3>
+                  <div className="top-selling-prices">
+                    <h4>₦{price}</h4>
+                    <h4>
+                      {amountInStock} <span>- left</span>
+                    </h4>
+                  </div>
+                  <h4>{occasion}</h4>
+                  <div className="top-selling-cta">
+                    <button
+                      className="add-cart"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        addToCart(_id);
+                      }}
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </article>
+              );
+            }
+          )}
         </div>
       </section>
 
@@ -262,23 +368,37 @@ const NonAlcoholShop = (props) => {
         </div>
 
         <div className="top-selling-cards rose-cards">
-          {data6.map(({ id, images, productName, price }) => {
-            return (
-              <article key={id} className="top-selling-details">
-                <div className="top-selling-image">
-                  <img src={images} alt={productName} data={data6} />
-                </div>
+          {data6.map(
+            ({ _id, images, productName, price, amountInStock, occasion }) => {
+              return (
+                <article key={_id} className="top-selling-details">
+                  <div className="top-selling-image">
+                    <img src={images} alt={productName} data={data6} />
+                  </div>
 
-                <h3>{productName}</h3>
-                <div className="top-selling-prices">
-                  <h4>{price}</h4>
-                </div>
-                <div className="top-selling-cta">
-                  <button className="add-cart">Add to cart</button>
-                </div>
-              </article>
-            );
-          })}
+                  <h3>{productName}</h3>
+                  <div className="top-selling-prices">
+                    <h4>₦{price}</h4>
+                    <h4>
+                      {amountInStock} <span>- left</span>
+                    </h4>
+                  </div>
+                  <h4>{occasion}</h4>
+                  <div className="top-selling-cta">
+                    <button
+                      className="add-cart"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        addToCart(_id);
+                      }}
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </article>
+              );
+            }
+          )}
         </div>
       </section>
     </div>

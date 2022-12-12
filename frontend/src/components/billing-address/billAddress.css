@@ -1,0 +1,33 @@
+.bill-address {
+  display: flex;
+  flex-direction: column;
+}
+
+.bill-address input {
+  padding: 10px;
+  width: 80%;
+}
+
+.billing-btn {
+  width: 15%;
+  padding: 7px 0;
+  font-family: "oswald", sans-serif;
+  margin: auto;
+  background: var(--primary-color);
+  color: var(--white-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  transition: var(--transition);
+  margin-top: 3rem;
+}
+
+.billing-btn:hover {
+  background: var(--white-color);
+  color: var(--primary-color);
+}
+
+@media screen and (max-width: 1024px) {
+  .billing-btn {
+    width: 35%;
+  }
+}
