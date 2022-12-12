@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Gulp-App-lab4/static/css/main.6faff56b.css",
-    "main.js": "/Gulp-App-lab4/static/js/main.cff0c09e.js",
+    "main.js": "/Gulp-App-lab4/static/js/main.37f194d5.js",
     "static/media/gulp pt wom 1.png": "/Gulp-App-lab4/static/media/gulp pt wom 1.da8c04edc1cd86dfeb5d.png",
     "static/media/Skull.jpg": "/Gulp-App-lab4/static/media/Skull.4d14c526abea3af10341.jpg",
     "static/media/gulp pt man 1.png": "/Gulp-App-lab4/static/media/gulp pt man 1.ac6dfc099d3cccfc945e.png",
@@ -48,10 +48,10 @@
     "static/media/Jack-Daniels-Logo 12.png": "/Gulp-App-lab4/static/media/Jack-Daniels-Logo 12.f87aa0cf25036334f7f2.png",
     "index.html": "/Gulp-App-lab4/index.html",
     "main.6faff56b.css.map": "/Gulp-App-lab4/static/css/main.6faff56b.css.map",
-    "main.cff0c09e.js.map": "/Gulp-App-lab4/static/js/main.cff0c09e.js.map"
+    "main.37f194d5.js.map": "/Gulp-App-lab4/static/js/main.37f194d5.js.map"
   },
   "entrypoints": [
     "static/css/main.6faff56b.css",
-    "static/js/main.cff0c09e.js"
+    "static/js/main.37f194d5.js"
   ]
 }
